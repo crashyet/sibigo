@@ -1,17 +1,17 @@
 import React from 'react'
-import pf1 from '../assets/profile/pf1.png'
-import pf2 from '../assets/profile/pf2.png'
-import pf3 from '../assets/profile/pf3.png'
-import pf4 from '../assets/profile/pf4.png'
-import pf5 from '../assets/profile/pf5.png'
-import maskot1 from '../assets/maskot/maskot1.png'
-import maskot2 from '../assets/maskot/maskot2.png'
-import maskot3 from '../assets/maskot/maskot3.png'
-import maskot4 from '../assets/maskot/maskot4.png'
+import pf1 from '../../assets/profile/pf1.png'
+import pf2 from '../../assets/profile/pf2.png'
+import pf3 from '../../assets/profile/pf3.png'
+import pf4 from '../../assets/profile/pf4.png'
+import pf5 from '../../assets/profile/pf5.png'
+import maskot1 from '../../assets/maskot/maskot1.png'
+import maskot2 from '../../assets/maskot/maskot2.png'
+import maskot3 from '../../assets/maskot/maskot3.png'
+import maskot4 from '../../assets/maskot/maskot4.png'
 
 const Home = () => {
   return (
-    <section id="home" className="relative px-40 min-h-screen">
+    <section id='home' className="relative px-40 min-h-screen">
       <div className="relative flex h-screen items-center mt-20">
         <div className="flex flex-col flex-1 gap-16 -mt-48">
           <h2 className="font-pjs font-bold text-6xl text-black leading-tight">Cara Seru dan Efektif<br />Belajar Bahasa<br />Isyarat</h2>
