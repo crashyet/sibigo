@@ -2,18 +2,18 @@ import React from 'react'
 
 const About = () => {
   return (
-    <section id='about' className='relative px-40 mt-44'>
-      <div className="flex items-center justify-center border-2 border-[#3338A0] rounded-full py-4">
-        <h2 className="font-pjs font-bold text-5xl">About Us</h2>
+    <section id='about' className='relative px-6 md:px-20 lg:px-40 mt-20 md:mt-32 lg:mt-44'>
+      <div className="flex items-center justify-center border-2 border-[#3338A0] rounded-full py-3 md:py-4 animate-on-scroll" data-animation="animate-fade-up">
+        <h2 className="font-pjs font-bold text-3xl md:text-4xl lg:text-5xl">About Us</h2>
       </div>
-      <div className="flex w-full mt-36">
-        <div className="flex-1">
-          <h2 className="font-pjs font-bold text-5xl">Apa Itu Sibigo?</h2>
-          <p className="font-pjs text-3xl mt-14">SIBI (Sistem Isyarat Bahasa Indonesia) adalah sistem bahasa isyarat resmi yang digunakan di Indonesia untuk mendukung komunikasi bagi komunitas Tuli.</p>
-          <p className="font-pjs text-3xl mt-10">Melalui SIBIGO, kami ingin memperkenalkan SIBI kepada masyarakat luas agar tercipta komunikasi yang lebih inklusif di Indonesia</p>
+      <div className="flex flex-col lg:flex-row w-full mt-16 md:mt-24 lg:mt-36 gap-10 lg:gap-0">
+        <div className="flex-1 animate-on-scroll" data-animation="animate-fade-left">
+          <h2 className="font-pjs font-bold text-3xl md:text-4xl lg:text-5xl">Apa Itu Sibigo?</h2>
+          <p className="font-pjs text-base md:text-xl lg:text-2xl mt-6 md:mt-10 lg:mt-14 leading-relaxed">SIBI (Sistem Isyarat Bahasa Indonesia) adalah sistem bahasa isyarat resmi yang digunakan di Indonesia untuk mendukung komunikasi bagi komunitas Tuli.</p>
+          <p className="font-pjs text-base md:text-xl lg:text-2xl mt-4 md:mt-6 lg:mt-10 leading-relaxed">Melalui SIBIGO, kami ingin memperkenalkan SIBI kepada masyarakat luas agar tercipta komunikasi yang lebih inklusif di Indonesia</p>
         </div>
-        <div className="flex flex-1 justify-center">
-          <div className="w-[666px] h-[666px] rounded-full bg-[#fcc61d]/25"></div>
+        <div className="hidden lg:flex flex-1 justify-center animate-on-scroll" data-animation="animate-fade-right">
+          <div className="w-[400px] h-[400px] xl:w-[666px] xl:h-[666px] rounded-full bg-[#fcc61d]/25"></div>
           <div className="absolute -ml-30 -mt-24">
             <svg width="396" height="239" viewBox="0 0 396 239" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g filter="url(#filter0_di_66_2737)">
@@ -233,37 +233,37 @@ const About = () => {
         </div>
       </div>
 
-      <div className="border-3 border-[#d9d9d9] left-0 mt-20 w-full"></div>
+      <div className="border-2 md:border-3 border-[#d9d9d9] left-0 mt-10 md:mt-16 lg:mt-20 w-full"></div>
 
-      <div className="flex flex-col gap-100 mt-30">
-        <div className="flex w-full">
-          <div className="max-w-[900px]">
-            <h2 className='text-[#3338A0] font-pjs font-bold text-6xl'>Gratis. Seru. Interaktif. Inklusif.</h2>
-            <p className='text-black font-pjs text-4xl mt-6'>SIBIGO bikin belajar Sistem Isyarat Bahasa Indonesia jadi lebih mudah dan menyenangkan untuk semua.</p>
+      <div className="flex flex-col gap-16 md:gap-24 lg:gap-32 mt-12 md:mt-20 lg:mt-30">
+        <div className="flex w-full animate-on-scroll" data-animation="animate-fade-left">
+          <div className="max-w-full lg:max-w-[900px]">
+            <h2 className='text-[#3338A0] font-pjs font-bold text-2xl md:text-4xl lg:text-5xl'>Gratis. Seru. Interaktif. Inklusif.</h2>
+            <p className='text-black font-pjs text-base md:text-xl lg:text-2xl mt-4 md:mt-6 leading-relaxed'>SIBIGO bikin belajar Sistem Isyarat Bahasa Indonesia jadi lebih mudah dan menyenangkan untuk semua.</p>
           </div>
           <div className=""></div>
         </div>
 
-        <div className="flex flex-row-reverse w-full">
-          <div className="max-w-[900px]">
-            <h2 className='text-[#3338A0] font-pjs font-bold text-6xl'>Belajar. Main. Naik Level.</h2>
-            <p className='text-black font-pjs text-4xl mt-6'>Setiap materi disusun bertahap agar mudah dipahami. Pengguna bisa belajar huruf, kata, hingga percakapan </p>
+        <div className="flex flex-row-reverse w-full animate-on-scroll" data-animation="animate-fade-right">
+          <div className="max-w-full lg:max-w-[900px]">
+            <h2 className='text-[#3338A0] font-pjs font-bold text-2xl md:text-4xl lg:text-5xl'>Belajar. Main. Naik Level.</h2>
+            <p className='text-black font-pjs text-base md:text-xl lg:text-2xl mt-4 md:mt-6 leading-relaxed'>Setiap materi disusun bertahap agar mudah dipahami. Pengguna bisa belajar huruf, kata, hingga percakapan </p>
           </div>
           <div className=""></div>
         </div>
 
-        <div className="flex w-full">
-          <div className="max-w-[900px]">
-            <h2 className='text-[#3338A0] font-pjs font-bold text-6xl'>Isyarat Mudah Untuk Semua.</h2>
-            <p className='text-black font-pjs text-4xl mt-6'>SIBIGO dirancang untuk pemula yang ingin mengenal bahasa isyarat dengan cara yang sederhana, jelas, dan tidak membingungkan.</p>
+        <div className="flex w-full animate-on-scroll" data-animation="animate-fade-left">
+          <div className="max-w-full lg:max-w-[900px]">
+            <h2 className='text-[#3338A0] font-pjs font-bold text-2xl md:text-4xl lg:text-5xl'>Isyarat Mudah Untuk Semua.</h2>
+            <p className='text-black font-pjs text-base md:text-xl lg:text-2xl mt-4 md:mt-6 leading-relaxed'>SIBIGO dirancang untuk pemula yang ingin mengenal bahasa isyarat dengan cara yang sederhana, jelas, dan tidak membingungkan.</p>
           </div>
           <div className=""></div>
         </div>
 
-        <div className="flex flex-row-reverse w-full">
-          <div className="max-w-[900px]">
-            <h2 className='text-[#3338A0] font-pjs font-bold text-6xl'>Go Learn. Go SIBIGO.</h2>
-            <p className='text-black font-pjs text-4xl mt-6'>Belajar sedikit demi sedikit dan bangun kemampuan komunikasi yang lebih inklusif dengan pengalaman yang terasa seperti bermain game.</p>
+        <div className="flex flex-row-reverse w-full animate-on-scroll" data-animation="animate-fade-right">
+          <div className="max-w-full lg:max-w-[900px]">
+            <h2 className='text-[#3338A0] font-pjs font-bold text-2xl md:text-4xl lg:text-5xl'>Go Learn. Go SIBIGO.</h2>
+            <p className='text-black font-pjs text-base md:text-xl lg:text-2xl mt-4 md:mt-6 leading-relaxed'>Belajar sedikit demi sedikit dan bangun kemampuan komunikasi yang lebih inklusif dengan pengalaman yang terasa seperti bermain game.</p>
           </div>
           <div className=""></div>
         </div>
