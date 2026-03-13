@@ -10,6 +10,7 @@ const AlphabetView = () => {
       bgColor: 'bg-[#3338A0]',
       shadowColor: 'shadow-[0_10px_20px_rgba(51,56,160,0.3)]',
     },
+    
     {
       range: 'Alfabet J-R',
       description: 'Pelajari 9 huruf pertama alfabet SIBI',
