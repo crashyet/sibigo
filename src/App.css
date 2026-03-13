@@ -4,3 +4,150 @@
 @theme {
   --font-pjs: 'Plus Jakarta Sans', sans-serif;
 }
+
+* {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================
+   SCROLL REVEAL ANIMATIONS
+   ========================================== */
+
+/* Fade In Up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In Left */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade In Right */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scale In */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Float animation for mascots */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* ==========================================
+   ANIMATION CLASSES
+   ========================================== */
+
+.animate-on-scroll {
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+.animate-on-scroll.animate-fade-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-on-scroll.animate-fade-left {
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.animate-on-scroll.animate-fade-right {
+  animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.animate-on-scroll.animate-scale-in {
+  animation: scaleIn 0.7s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Stagger delays for children */
+.stagger-1 { animation-delay: 0.1s !important; }
+.stagger-2 { animation-delay: 0.2s !important; }
+.stagger-3 { animation-delay: 0.3s !important; }
+.stagger-4 { animation-delay: 0.4s !important; }
+.stagger-5 { animation-delay: 0.5s !important; }
+
+/* ==========================================
+   NAVBAR GLASS EFFECT
+   ========================================== */
+.navbar-glass {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.navbar-glass.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================
+   TOP CHAT GLASS EFFECT
+   ========================================== */
+.chat-glass {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(225,226,254, 0.85);
+}
+
+.chat-glass.scrolled {
+  background: rgba(225,226,254, 0.95);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================
+   MOBILE MENU TRANSITION
+   ========================================== */
+.mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.mobile-menu.open {
+  max-height: 400px;
+  opacity: 1;
+}
