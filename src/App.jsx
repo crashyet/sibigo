@@ -6,6 +6,7 @@ import DetailArtikel from './pages/article/DetailArtikel'
 import ChatBot from './pages/chat/ChatBot'
 import BookPage from './pages/book'
 import AlphabetView from './pages/book/alphabet/AlphabetView'
+import QuizPage from './pages/quiz'
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
             <Route path="conversation" element={<div className="p-10 text-2xl font-bold">Materi: Percakapan Harian</div>} />
             <Route path="numbers" element={<div className="p-10 text-2xl font-bold">Materi: Angka & Bilangan</div>} />
           </Route>
+          <Route path="/quiz" element={<QuizPage />} />
         </Routes>
       </BrowserRouter>
     </>
