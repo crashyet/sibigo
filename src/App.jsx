@@ -8,6 +8,8 @@ import BookPage from './pages/book'
 import AlphabetView from './pages/book/alphabet/AlphabetView'
 import QuizPage from './pages/quiz'
 
+import NotFound from './pages/components/NotFound'
+
 function App() {
 
   return (
@@ -26,6 +28,7 @@ function App() {
             <Route path="numbers" element={<div className="p-10 text-2xl font-bold">Materi: Angka & Bilangan</div>} />
           </Route>
           <Route path="/quiz" element={<QuizPage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </>

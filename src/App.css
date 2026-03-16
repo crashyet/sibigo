@@ -191,3 +191,8 @@
 .quiz-option-answered {
   pointer-events: none;
 }
+
+.text-stroke-yellow {
+  -webkit-text-stroke: 6px #FCC61D; /* Untuk browser berbasis Webkit (Chrome, Edge, Safari) */
+  text-stroke: 6px #FCC61D;         /* Standar (belum semua support penuh) */
+}
