@@ -1,30 +1,11 @@
-import React, { useEffect } from 'react'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+import React from 'react'
+
+import useScrollReveal from '../../hooks/useScrollReveal'
+import Navbar from '../../components/layout/Navbar'
+import Footer from '../../components/layout/Footer'
 
 const MoreKonten = () => {
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const animationType = entry.target.dataset.animation || 'animate-fade-up'
-            entry.target.classList.add(animationType)
-            observer.unobserve(entry.target)
-          }
-        })
-      },
-      {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px',
-      }
-    )
-
-    const elements = document.querySelectorAll('.animate-on-scroll')
-    elements.forEach((el) => observer.observe(el))
-
-    return () => observer.disconnect()
-  }, [])
+  useScrollReveal()
 
   return (
     <>
@@ -62,20 +43,11 @@ const MoreKonten = () => {
               </div>
             </div>
           </div>
-
         </section>
 
-        <section id='fakta'>
-
-        </section>
-
-        <section id='faq'>
-
-        </section>
-
-        <section id='artikel'>
-
-        </section>
+        <section id='fakta'></section>
+        <section id='faq'></section>
+        <section id='artikel'></section>
       </div>
       <Footer />
     </>
