@@ -6,7 +6,7 @@ const SignCard = ({title, icon, onClick}) => {
       onClick={onClick} 
       className="w-full bg-[#3338A0] rounded-[24px] border border-[#E5E7EB] overflow-hidden flex flex-col hover:scale-[1.02] hover:shadow-lg transition-transform duration-300 cursor-pointer group shadow-sm"
     >
-      <div className="flex-1 flex justify-center items-center p-4 min-h-[160px]">
+      <div className="flex-1 flex justify-center items-center pt-4">
         {icon && <img src={icon} alt={title} className="h-32 object-contain" />}
       </div>
       <div className="bg-white py-3 flex items-center justify-center gap-2">

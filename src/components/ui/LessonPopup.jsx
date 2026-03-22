@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import maskotBook from '../../assets/maskot/maskotBook.png'
+import maskotBook from '@/assets/maskot/maskotBook.png'
 
 const LessonPopup = ({ isOpen, onClose, data, videoOnly = false, titlePrefix = "Huruf Dasar :" }) => {
   const [activeTab, setActiveTab] = useState(videoOnly ? 'video' : 'image') // 'image' or 'video'

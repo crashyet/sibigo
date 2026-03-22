@@ -1,6 +1,6 @@
 import React from 'react'
-import alphabetIcon from '../../../assets/book/lks.png'
-import HeaderLine from '../../../components/ui/HeaderLine'
+import alphabetIcon from '@/assets/book/lks.png'
+import HeaderLine from '@/components/ui/HeaderLine'
 import { Link } from 'react-router-dom'
 
 const WordsView = () => {

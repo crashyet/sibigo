@@ -1,11 +1,11 @@
-import maskot12 from '../../../assets/maskot/maskot12.png'
-import maskot13 from '../../../assets/maskot/maskot13.png'
-import maskot14 from '../../../assets/maskot/maskot14.png'
-import maskot15 from '../../../assets/maskot/maskot15.png'
+import maskot12 from '@/assets/maskot/maskot12.png'
+import maskot13 from '@/assets/maskot/maskot13.png'
+import maskot14 from '@/assets/maskot/maskot14.png'
+import maskot15 from '@/assets/maskot/maskot15.png'
 
-import soal1 from '../../../assets/quiz/soal1.png'
-import soal2 from '../../../assets/quiz/soal2.png'
-import soal6 from '../../../assets/quiz/soal6.png'
+import soal1 from '@/assets/quiz/soal1.png'
+import soal2 from '@/assets/quiz/soal2.png'
+import soal6 from '@/assets/quiz/soal6.png'
 
 
 export const conversationData = [

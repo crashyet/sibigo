@@ -21,6 +21,10 @@ const variantStyles = {
     'bg-white text-[#3338A0] shadow-[0_5px_0_#D0D0D0] hover:shadow-none hover:translate-y-1',
   red:
     'bg-white text-[#EF4848] shadow-[0_5px_0_#EF4848] hover:shadow-none hover:translate-y-1 border border-[#EF4848]',
+  redbg:
+    'bg-[#EB3939] text-white shadow-[0_5px_0_#F7F7F7] hover:shadow-none hover:translate-y-1 border border-[#EF4848]',
+  green:
+    'bg-[#22C35D] text-white shadow-[0_5px_0_#F7F7F7] hover:shadow-none hover:translate-y-1 border border-[#22C35D]',
 }
 
 const Button = ({ variant = 'primary', className = '', children, ...props }) => {

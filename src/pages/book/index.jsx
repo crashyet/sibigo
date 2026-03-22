@@ -1,7 +1,7 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 
-import SidebarBook from '../../components/layout/SidebarBook'
+import SidebarBook from '@/components/layout/SidebarBook'
 
 const BookPage = () => {
   return (

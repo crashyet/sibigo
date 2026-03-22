@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { useParams, Navigate } from 'react-router-dom'
-import BackButton from '../../../components/ui/BackButton'
-import icon from '../../../assets/logo.png'
-import ButtonLesson from '../../../components/ui/ButtonLesson'
-import LessonPopup from '../../../components/ui/LessonPopup'
-import { wordsData } from './wordsData'
+import BackButton from '@/components/ui/BackButton'
+import icon from '@/assets/logo.png'
+import ButtonLesson from '@/components/ui/ButtonLesson'
+import LessonPopup from '@/components/ui/LessonPopup'
+import { wordsData } from '@/data/book'
 
 const WordsDetailView = () => {
   const { id } = useParams()
