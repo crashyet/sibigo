@@ -1,7 +1,7 @@
-import Film from '../../assets/article/film.png'
-import DuoKembar from '../../assets/article/duo-kembar.png'
-import Berprestasi from '../../assets/article/disabilitas-berprestasi.png'
-import HeroImg from '../../assets/article/model.png'
+import Film from '@/assets/article/film.png'
+import DuoKembar from '@/assets/article/duo-kembar.png'
+import Berprestasi from '@/assets/article/disabilitas-berprestasi.png'
+import HeroImg from '@/assets/article/model.png'
 
 const articlesData = [
   {

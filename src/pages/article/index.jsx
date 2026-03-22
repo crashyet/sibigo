@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 
-import useScrollReveal from '../../hooks/useScrollReveal'
-import Navbar from '../../components/layout/Navbar'
-import Footer from '../../components/layout/Footer'
-import NotFound from '../not-found/NotFound'
-import ArtikelCard from '../../components/ui/ArtikelCard'
-import articlesData from './articlesData.js'
-import BackButton from '../../components/ui/BackButton'
+import useScrollReveal from '@/hooks/useScrollReveal'
+import Navbar from '@/components/layout/Navbar'
+import Footer from '@/components/layout/Footer'
+import NotFound from '@/pages/not-found/NotFound'
+import ArtikelCard from '@/components/ui/ArtikelCard'
+import articlesData from '@/data/articlesData.js'
+import BackButton from '@/components/ui/BackButton'
 
 const DetailArtikel = () => {
   const { id } = useParams()

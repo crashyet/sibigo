@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { Link } from 'react-router-dom'
 import { GoogleGenerativeAI } from '@google/generative-ai'
-import logo from '../../assets/logo.png'
+import logo from '@/assets/logo.png'
 
 // Initialize Gemini
 const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY)
