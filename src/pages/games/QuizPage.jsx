@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import quizData from './data/quizData'
-import maskot9 from '../../assets/maskot/maskot9.png'
-import maskot10 from '../../assets/maskot/maskot10.png'
-import maskotBook from '../../assets/maskot/maskotBook.png'
-import BackButton from '../../components/ui/BackButton'
-import BackAlert from '../../components/ui/BackAlert'
+import quizData from '@/data/games/quizData'
+import maskot9 from '@/assets/maskot/maskot9.png'
+import maskot10 from '@/assets/maskot/maskot10.png'
+import maskotBook from '@/assets/maskot/maskotBook.png'
+import BackButton from '@/components/ui/BackButton'
+import BackAlert from '@/components/ui/BackAlert'
 
 const QuizPage = () => {
   const navigate = useNavigate()

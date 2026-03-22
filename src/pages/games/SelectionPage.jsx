@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
-import PlayButton from '../../components/ui/PlayButton'
-import HeaderLine from '../../components/ui/HeaderLine'
-import BackButton from '../../components/ui/BackButton'
+import PlayButton from '@/components/ui/PlayButton'
+import HeaderLine from '@/components/ui/HeaderLine'
+import BackButton from '@/components/ui/BackButton'
+import LoadingScreen from '@/components/ui/LoadingScreen'
+
+import quiz from '@/assets/quiz.png'
+import games from '@/assets/games.png'
 
 /**
  * SelectionPage - Halaman pemilihan kategori game / kuis.
@@ -10,16 +14,30 @@ import BackButton from '../../components/ui/BackButton'
  */
 const SelectionPage = () => {
   const navigate = useNavigate()
+  const [isLoading, setIsLoading] = useState(false)
+  const [loadingMessage, setLoadingMessage] = useState('Memuat...')
+
+  const handleGameSelect = (path, title) => {
+    // Generate pesan yang sesuai dari judul menu opsinya
+    const targetTitle = title.toLowerCase().includes('menguji') ? 'Kuis' : 'Permainan'
+    setLoadingMessage(`Mempersiapkan ${targetTitle}...`)
+    setIsLoading(true)
+
+    // Jeda 3 detik untuk menampilkan efek loading
+    setTimeout(() => {
+      navigate(path)
+    }, 3000)
+  }
 
   const categories = [
     {
-      image: '',
+      image: quiz,
       title: 'Siap menguji kemampuanmu?',
       description: 'Jawab setiap pertanyaan dan pilih jawaban yang benar!',
       path: '/play/quiz',
     },
     {
-      image: '',
+      image: games,
       title: 'Ayo bermain!',
       description: 'Belajar bahasa isyarat sambil bermain dengan cara yang seru!',
       path: '/play/games',
@@ -27,8 +45,10 @@ const SelectionPage = () => {
   ]
 
   return (
-    <section className='bg-white h-screen relative font-pjs'>
-      {/* Linear Bottom */}
+    <>
+      {isLoading && <LoadingScreen message={loadingMessage} />}
+      <section className='bg-white h-screen relative font-pjs overflow-hidden'>
+        {/* Linear Bottom */}
       <div className="absolute bottom-0 w-full h-1/4 bg-linear-to-b from-[#D9D9D9]/0 to-[#C5C7FF]"></div>
 
       {/* Background Decorative SVGs */}
@@ -58,23 +78,27 @@ const SelectionPage = () => {
           Uji pengetahuanmu dengan Kuis atau belajar sambil bermain di Game.
         </p>
 
-        {/* Categories */}
         <div className="flex flex-col lg:flex-row gap-10">
-          {categories.map((categories, index) => (
-            <div key={index} onClick={() => navigate(categories.path)} className="flex-1 border-2 border-[#3338A0] bg-white rounded-3xl px-7 pt-8 pb-14">
+          {categories.map((category, index) => (
+            <div 
+              key={index} 
+              onClick={() => handleGameSelect(category.path, category.title)} 
+              className="flex-1 border-2 border-[#3338A0] bg-white rounded-3xl px-7 pt-8 pb-14 cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all"
+            >
               <div className="relative mb-4">
-                <img src={categories.image} alt={categories.title} className='w-full h-[400px] rounded-xl object-cover' />
+                <img src={category.image} alt={category.title} className='w-full h-[400px] rounded-xl object-cover' />
                 <PlayButton />
               </div>
               <div className="">
-                <h3 className='font-semibold text-xl text-black'>{categories.title}</h3>
-                <p className='font-normal text-black text-xl'>{categories.description}</p>
+                <h3 className='font-semibold text-xl text-black'>{category.title}</h3>
+                <p className='font-normal text-black text-xl'>{category.description}</p>
               </div>
             </div>
           ))}
         </div>
       </main>      
     </section>
+    </>
   )
 }
 

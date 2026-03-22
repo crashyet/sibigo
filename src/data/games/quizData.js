@@ -1,11 +1,11 @@
-import soal1 from '../../../assets/quiz/soal1.png'
-import soal2 from '../../../assets/quiz/soal2.png'
-import soal3 from '../../../assets/quiz/soal3.png'
-import soal4 from '../../../assets/quiz/soal4.png'
-import soal5 from '../../../assets/quiz/soal5.png'
-import soal6 from '../../../assets/quiz/soal6.png'
-import soal7 from '../../../assets/quiz/soal7.png'
-import soal8 from '../../../assets/quiz/soal8.png'
+import soal1 from '@/assets/quiz/soal1.png'
+import soal2 from '@/assets/quiz/soal2.png'
+import soal3 from '@/assets/quiz/soal3.png'
+import soal4 from '@/assets/quiz/soal4.png'
+import soal5 from '@/assets/quiz/soal5.png'
+import soal6 from '@/assets/quiz/soal6.png'
+import soal7 from '@/assets/quiz/soal7.png'
+import soal8 from '@/assets/quiz/soal8.png'
 
 const quizData = [
   {
