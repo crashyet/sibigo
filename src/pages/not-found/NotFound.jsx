@@ -1,8 +1,8 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import Button from '../../components/ui/Button'
-import maskot from '../../assets/maskot/maskotNotFound.png'
+import Button from '@/components/ui/Button'
+import maskot from '@/assets/maskot/maskotNotFound.png'
 
 const NotFound = () => {
   const navigate = useNavigate()

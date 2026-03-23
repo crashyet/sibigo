@@ -1,5 +1,10 @@
 ﻿import React from 'react'
 
+import gif1 from '@/assets/gif/gif_interaktif.gif'
+import gif2 from '@/assets/gif/gif_belajar.gif'
+import gif3 from '@/assets/gif/gif_isyarat.gif'
+import gif4 from '@/assets/gif/gif_idea.gif'
+
 const About = () => {
   return (
     <section id='about' className='relative px-6 md:px-20 lg:px-40 mt-20 md:mt-32 lg:mt-44'>
@@ -235,37 +240,45 @@ const About = () => {
 
       <div className="border-2 md:border-3 border-[#d9d9d9] left-0 mt-10 md:mt-16 lg:mt-20 w-full"></div>
 
-      <div className="flex flex-col gap-16 md:gap-24 lg:gap-32 mt-12 md:mt-20 lg:mt-30">
-        <div className="flex w-full animate-on-scroll" data-animation="animate-fade-left">
+      <div className="relative flex flex-col gap-16 md:gap-24 mt-12 md:mt-20 lg:mt-30">
+        <div className="relative flex justify-between w-full animate-on-scroll" data-animation="animate-fade-left">
           <div className="max-w-full lg:max-w-[900px]">
             <h2 className='text-[#3338A0] font-pjs font-bold text-2xl md:text-4xl lg:text-5xl'>Gratis. Seru. Interaktif. Inklusif.</h2>
             <p className='text-black font-pjs text-base md:text-xl lg:text-2xl mt-4 md:mt-6 leading-relaxed'>SIBIGO bikin belajar Sistem Isyarat Bahasa Indonesia jadi lebih mudah dan menyenangkan untuk semua.</p>
           </div>
-          <div className=""></div>
+          <div className="-mt-24 mr-24">
+            <img src={gif1} alt="" />
+          </div>
         </div>
 
-        <div className="flex flex-row-reverse w-full animate-on-scroll" data-animation="animate-fade-right">
+        <div className="relative flex justify-between flex-row-reverse w-full mb-24 animate-on-scroll" data-animation="animate-fade-right">
           <div className="max-w-full lg:max-w-[900px]">
             <h2 className='text-[#3338A0] font-pjs font-bold text-2xl md:text-4xl lg:text-5xl'>Belajar. Main. Naik Level.</h2>
             <p className='text-black font-pjs text-base md:text-xl lg:text-2xl mt-4 md:mt-6 leading-relaxed'>Setiap materi disusun bertahap agar mudah dipahami. Pengguna bisa belajar huruf, kata, hingga percakapan </p>
           </div>
-          <div className=""></div>
+          <div className="-mt-24 ml-24">
+            <img src={gif2} alt="" />
+          </div>
         </div>
 
-        <div className="flex w-full animate-on-scroll" data-animation="animate-fade-left">
+        <div className="relative flex justify-between w-full mb-24 animate-on-scroll" data-animation="animate-fade-left">
           <div className="max-w-full lg:max-w-[900px]">
             <h2 className='text-[#3338A0] font-pjs font-bold text-2xl md:text-4xl lg:text-5xl'>Isyarat Mudah Untuk Semua.</h2>
             <p className='text-black font-pjs text-base md:text-xl lg:text-2xl mt-4 md:mt-6 leading-relaxed'>SIBIGO dirancang untuk pemula yang ingin mengenal bahasa isyarat dengan cara yang sederhana, jelas, dan tidak membingungkan.</p>
           </div>
-          <div className=""></div>
+          <div className="-mt-48 mr-24">
+            <img src={gif3} alt="" />
+          </div>
         </div>
 
-        <div className="flex flex-row-reverse w-full animate-on-scroll" data-animation="animate-fade-right">
+        <div className="relative flex justify-between flex-row-reverse w-full animate-on-scroll" data-animation="animate-fade-right">
           <div className="max-w-full lg:max-w-[900px]">
             <h2 className='text-[#3338A0] font-pjs font-bold text-2xl md:text-4xl lg:text-5xl'>Go Learn. Go SIBIGO.</h2>
             <p className='text-black font-pjs text-base md:text-xl lg:text-2xl mt-4 md:mt-6 leading-relaxed'>Belajar sedikit demi sedikit dan bangun kemampuan komunikasi yang lebih inklusif dengan pengalaman yang terasa seperti bermain game.</p>
           </div>
-          <div className=""></div>
+          <div className="-mt-24 ml-24">
+            <img src={gif4} alt="" />
+          </div>
         </div>
       </div>
     </section>

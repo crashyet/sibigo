@@ -1,7 +1,7 @@
 import React from 'react'
 
-import SectionTitle from '../../../components/ui/SectionTitle'
-import ContactInfoCard from '../../../components/ui/ContactInfoCard'
+import SectionTitle from '@/components/ui/SectionTitle'
+import ContactInfoCard from '@/components/ui/ContactInfoCard'
 
 const PhoneIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -23,17 +23,22 @@ const LocationIcon = () => (
 )
 
 const CONTACT_INFO = [
-  { icon: <PhoneIcon />, title: 'Nomer Telephone', value: '+62 856 9555 4326' },
+  { icon: <PhoneIcon />, title: 'Nomer Telephone', value: '+62 812-3456-7890' },
   { icon: <EmailIcon />, title: 'Email', value: 'sibigo@gmail.com' },
   { icon: <LocationIcon />, title: 'Alamat', value: 'Jl. Dr. Soetomo, Karangcengis, Kabupaten Cilacap' },
 ]
 
 const SOCIAL_LINKS = [
-  { icon: 'facebook', path: 'M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z' },
-  { icon: 'linkedin', path: 'M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z M2 9h4v12H2z M4 2a2 2 0 110 4 2 2 0 010-4z' },
-  { icon: 'youtube', path: 'M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 00-1.94 2C1 8.14 1 12 1 12s0 3.86.46 5.58a2.78 2.78 0 001.94 2c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 001.94-2C23 15.86 23 12 23 12s0-3.86-.46-5.58z M9.75 15.02V8.98L15.5 12l-5.75 3.02z' },
-  { icon: 'instagram', path: 'M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z M21.23 6.29a2.38 2.38 0 11-4.76 0 2.38 2.38 0 014.76 0z M12 21.35c-5.17 0-9.35-4.18-9.35-9.35S6.83 2.65 12 2.65s9.35 4.18 9.35 9.35-4.18 9.35-9.35 9.35z' },
-  { icon: 'tiktok', path: 'M12.525.02c1.31 0 2.57.51 3.51 1.44.3.3.56.63.78.98.81-.03 1.63-.03 2.44 0v3.42c-.81 0-1.61-.02-2.42-.05 0 2.11-.04 4.22-.05 6.33 0 3.31-2.69 6-6 6-3.31 0-6-2.69-6-6 0-3.31 2.69-6 6-6 .31 0 .61.02.91.07V9.75c-.3-.04-.6-.06-.91-.06-1.38 0-2.5 1.12-2.5 2.5 0 1.38 1.12 2.5 2.5 2.5 1.38 0 2.5-1.12 2.5-2.5 0-2.4-.04-4.8-.05-7.2 1.37.16 2.73 1.15 3.32 2.44V.02h-3.41z' },
+  { icon: 'facebook', path: 'M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z', 
+    href: '#', title: 'Facebook' },
+  { icon: 'linkedin', path: 'M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z M2 9h4v12H2z M4 2a2 2 0 110 4 2 2 0 010-4z', 
+    href: '#', title: 'LinkedIn' },
+  { icon: 'youtube', path: 'M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 00-1.94 2C1 8.14 1 12 1 12s0 3.86.46 5.58a2.78 2.78 0 001.94 2c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 001.94-2C23 15.86 23 12 23 12s0-3.86-.46-5.58z M9.75 15.02V8.98L15.5 12l-5.75 3.02z', 
+    href: '#', title: 'Youtube' },
+  { icon: 'instagram', path: 'M8 3C5.243 3 3 5.243 3 8v8c0 2.757 2.243 5 5 5h8c2.757 0 5-2.243 5-5V8c0-2.757-2.243-5-5-5H8zm0 2h8c1.654 0 3 1.346 3 3v8c0 1.654-1.346 3-3 3H8c-1.654 0-3-1.346-3-3V8c0-1.654 1.346-3 3-3zm4 2c-2.757 0-5 2.243-5 5s2.243 5 5 5 5-2.243 5-5-2.243-5-5-5zm0 2c1.654 0 3 1.346 3 3s-1.346 3-3 3-3-1.346-3-3 1.346-3 3-3zm4.5-.5c-.828 0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5 1.5-.672 1.5-1.5-.672-1.5-1.5-1.5z', 
+    href: '#', title: 'Instagram' },
+  { icon: 'tiktok', path: 'M12.525.02c1.31 0 2.57.51 3.51 1.44.3.3.56.63.78.98.81-.03 1.63-.03 2.44 0v3.42c-.81 0-1.61-.02-2.42-.05 0 2.11-.04 4.22-.05 6.33 0 3.31-2.69 6-6 6-3.31 0-6-2.69-6-6 0-3.31 2.69-6 6-6 .31 0 .61.02.91.07V9.75c-.3-.04-.6-.06-.91-.06-1.38 0-2.5 1.12-2.5 2.5 0 1.38 1.12 2.5 2.5 2.5 1.38 0 2.5-1.12 2.5-2.5 0-2.4-.04-4.8-.05-7.2 1.37.16 2.73 1.15 3.32 2.44V.02h-3.41z', 
+    href: '#', title: 'Tiktok' },
 ]
 
 const Contact = () => {
@@ -46,7 +51,7 @@ const Contact = () => {
         {/* Left Column: Form */}
         <div className="flex-1">
           <div className="flex items-center gap-4 mb-10">
-            <div className="h-1 w-20 bg-gradient-to-r from-blue-200 to-blue-700 rounded-full"></div>
+            <div className="h-1 w-20 bg-linear-to-r from-blue-200 to-blue-700 rounded-full"></div>
             <h3 className="text-2xl font-bold tracking-widest text-[#1E2B63]">CONTACT US</h3>
           </div>
 
@@ -111,11 +116,11 @@ const Contact = () => {
           </div>
 
           <div className="mt-12 space-y-4">
-            <div className="h-[1px] bg-white/20 w-full"></div>
+            <div className="h-px bg-white/20 w-full"></div>
             <p className="text-sm font-semibold">Connect with us</p>
             <div className="flex gap-4">
               {SOCIAL_LINKS.map((social, idx) => (
-                <a key={idx} href="#" className="w-12 h-12 bg-white/10 hover:bg-white/20 flex items-center justify-center rounded-full transition-colors">
+                <a key={idx} href={social.href} title={social.title} className="w-12 h-12 bg-white/10 hover:bg-white/20 flex items-center justify-center rounded-full transition-colors">
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                     <path d={social.path} />
                   </svg>

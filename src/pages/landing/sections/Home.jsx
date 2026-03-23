@@ -1,27 +1,29 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
-import Button from '../../../components/ui/Button'
+import Button from '@/components/ui/Button'
 import StatCard from '../../../components/ui/StatCard'
 
-import pf1 from '../../../assets/profile/pf1.png'
-import pf2 from '../../../assets/profile/pf2.png'
-import pf3 from '../../../assets/profile/pf3.png'
-import pf4 from '../../../assets/profile/pf4.png'
-import pf5 from '../../../assets/profile/pf5.png'
-import maskot1 from '../../../assets/maskot/maskot1.png'
-import maskot2 from '../../../assets/maskot/maskot2.png'
-import maskot3 from '../../../assets/maskot/maskot3.png'
-import maskot4 from '../../../assets/maskot/maskot4.png'
+import pf1 from '@/assets/profile/pf1.png'
+import pf2 from '@/assets/profile/pf2.png'
+import pf3 from '@/assets/profile/pf3.png'
+import pf4 from '@/assets/profile/pf4.png'
+import pf5 from '@/assets/profile/pf5.png'
+import maskot1 from '@/assets/maskot/maskot1.png'
+import maskot2 from '@/assets/maskot/maskot2.png'
+import maskot3 from '@/assets/maskot/maskot3.png'
+import maskot4 from '@/assets/maskot/maskot4.png'
 
 const PROFILE_IMAGES = [pf1, pf2, pf3, pf4, pf5]
 
 const STATS = [
-  { value: '2,5 JT+', label: 'Tuli & Gangguan Pendengaran di Indonesia' },
-  { value: '80%', label: 'Tidak mendapat pendidikan bahasa isyarat formal' },
-  { value: '< 5%', label: 'Masyarakat umum yang memahami SIBI' },
+  { value: '9,6 JT+', label: 'Tuli & Gangguan Pendengaran di Indonesia' },
+  { value: '5.280+', label: 'Data isyarat SIBI dalam penelitian' },
+  { value: 'RENDAH', label: 'Pemahaman masyarakat terhadap bahasa isyarat' },
 ]
 
 const Home = () => {
+  const navigate = useNavigate()
   return (
     <section id='home' className="relative px-6 md:px-20 lg:px-40 min-h-screen overflow-hidden">
       {/* Hero Area */}
@@ -32,7 +34,7 @@ const Home = () => {
             Cara Seru dan Efektif<br />Belajar Bahasa<br />Isyarat
           </h2>
           <div className="flex flex-col sm:flex-row gap-6 md:gap-10 lg:gap-20 items-start sm:items-center">
-            <Button className="w-full sm:w-56 md:w-72 lg:w-88 text-lg md:text-xl py-2.5">
+            <Button onClick={() => navigate('/konten')} className="w-full sm:w-56 md:w-72 lg:w-88 text-lg md:text-xl py-4">
               Mulai
             </Button>
             <div className="flex">
@@ -88,7 +90,7 @@ const Home = () => {
       {/* Stats Banner */}
       <div className="relative mt-6 md:mt-14">
         {/* Mascot4 — hidden on mobile */}
-        <div className="hidden md:block absolute -mt-36 -ml-8 lg:ml-0 z-20">
+        <div className="hidden md:block absolute -mt-36 -ml-8 lg:ml-6 z-20">
           <img src={maskot4} alt="" className='w-48 lg:w-auto' />
           <div className="absolute -mt-32 ml-16 -z-1">
             <svg className="w-[263px]" viewBox="0 0 263 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -97,7 +99,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-center md:justify-end md:-mt-50 text-white bg-linear-to-r from-[#3338A0] to-[#4A50CE] w-full gap-4 md:gap-6 lg:gap-10 py-8 md:py-12 lg:py-16 px-6 md:pl-52 lg:pl-64 md:pr-12 lg:pr-24 rounded-[30px] md:rounded-[50px] animate-on-scroll" data-animation="animate-fade-up">
+        <div className="flex flex-col md:flex-row justify-center md:justify-end md:-mt-50 text-white bg-linear-to-r from-[#3338A0] to-[#4A50CE] w-full gap-4 md:gap-6 lg:gap-10 py-8 md:py-12 lg:py-16 px-6 md:pl-52 lg:pl-96 md:pr-12 lg:pr-24 rounded-[30px] md:rounded-[50px] animate-on-scroll" data-animation="animate-fade-up">
           {STATS.map((stat, index) => (
             <StatCard key={index} value={stat.value} label={stat.label} />
           ))}

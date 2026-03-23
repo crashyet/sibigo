@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 
 // Pages
 import LandingPage from './pages/landing/LandingPage'
@@ -15,6 +15,8 @@ import WordsView from './pages/book/words'
 import WordsDetailView from './pages/book/words/detail'
 import ConversationView from './pages/book/conversation'
 import ConversationDetailView from './pages/book/conversation/detail'
+import NumberView from './pages/book/number'
+import NumberDetailView from './pages/book/number/detail'
 
 // Games
 import GamesPage from './pages/games/GamesPage'
@@ -25,9 +27,10 @@ import SelectionPage from './pages/games/SelectionPage'
 import NotFound from './pages/not-found/NotFound'
 
 function App() {
+
   return (
     <>
-      <BrowserRouter>
+      <Router>
         <Routes>
           {/* Landing */}
           <Route path="/" element={<LandingPage />} />
@@ -41,12 +44,13 @@ function App() {
             <Route path="alphabet" element={<AlphabetView />} />
             <Route path="words" element={<WordsView />} />
             <Route path="conversation" element={<ConversationView />} />
-            <Route path="numbers" element={<div className="p-10 text-2xl font-bold">Materi: Angka & Bilangan</div>} />
+            <Route path="numbers" element={<NumberView />} />
           </Route>
 
           <Route path="/lesson/alphabet/:id" element={<AlphabetDetailView />} />
           <Route path="/lesson/words/:id" element={<WordsDetailView />} />
           <Route path="/lesson/conversation/:id" element={<ConversationDetailView />} />
+          <Route path="/lesson/number/detail" element={<NumberDetailView />} />
 
 
           {/* Games */}
@@ -57,7 +61,7 @@ function App() {
           {/* Fallback */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
+      </Router>
     </>
   )
 }

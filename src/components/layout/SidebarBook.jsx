@@ -1,12 +1,12 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
-import logo from '../../assets/logo.png'
-import sibigoText from '../../assets/sibigo-brown.png'
-import huruf from '../../assets/huruf.png'
-import isyarat from '../../assets/isyarat.png'
-import percakapan from '../../assets/percakapan.png'
-import angka from '../../assets/angka.png'
+import logo from '@/assets/logo.png'
+import sibigoText from '@/assets/sibigo-brown.png'
+import huruf from '@/assets/huruf.png'
+import isyarat from '@/assets/isyarat.png'
+import percakapan from '@/assets/percakapan.png'
+import angka from '@/assets/angka.png'
 
 const MENU_ITEMS = [
   { id: 'alphabet', label: 'Huruf Alfabet', icon: huruf, path: '/lesson/alphabet' },
@@ -16,10 +16,11 @@ const MENU_ITEMS = [
 ]
 
 const SidebarBook = () => {
+  const navigate = useNavigate()
   return (
-    <aside className="w-88 min-h-screen bg-white border-r border-[#D1D1D1] flex shrink-0 flex-col py-12 px-8 font-pjs">
+    <aside className="relative z-10 w-88 min-h-screen bg-white border-r border-[#D1D1D1] flex shrink-0 flex-col py-12 px-8 font-pjs">
       {/* Logo Section */}
-      <div className="flex items-center gap-3 mb-16 px-4">
+      <div onClick={() => navigate('/')} className="flex items-center gap-3 mb-16 px-4 cursor-pointer">
         <img src={logo} alt="Sibigo" className="w-16" />
         <img src={sibigoText} alt="SIBIGO" className="h-7" />
       </div>

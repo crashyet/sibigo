@@ -1,22 +1,22 @@
 import React from 'react'
-import text from '../../assets/sibigo-white.png'
+import text from '@/assets/sibigo-white.png'
 
 const FOOTER_LINKS = {
   perusahaan: [
-    { label: 'Home', href: '#' },
-    { label: 'About Us', href: '#' },
-    { label: 'Konten', href: '#' },
-    { label: 'Contact Us', href: '#' },
+    { label: 'Home', href: '#home' },
+    { label: 'About Us', href: '#about' },
+    { label: 'Konten', href: '#konten' },
+    { label: 'Contact Us', href: '#contact' },
   ],
   contact: [
     { label: 'Beranda', href: '#' },
-    { label: '+62 856 9555 4326', href: '#' },
+    { label: '+62 812 3456 7890', href: '#' },
     { label: 'sibigo@gmail.com', href: '#' },
   ],
   fitur: [
-    { label: 'Ai Pintar', href: '#' },
-    { label: 'LKS SIBI', href: '#' },
-    { label: 'Game Edukasi', href: '#' },
+    { label: 'Ai Pintar', href: '/chat' },
+    { label: 'LKS SIBI', href: '/lesson' },
+    { label: 'Game Edukasi', href: '/play' },
   ],
 }
 

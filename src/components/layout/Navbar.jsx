@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
-import useScrolled from '../../hooks/useScrolled'
-import Button from '../ui/Button'
+import useScrolled from '@/hooks/useScrolled'
+import Button from '@/components/ui/Button'
 
-import logo from '../../assets/logo.png'
-import text from '../../assets/sibigo-brown.png'
+import logo from '@/assets/logo.png'
+import text from '@/assets/sibigo-brown.png'
 
 const NAV_LINKS = [
   { href: '/#home', label: 'Home' },
@@ -15,6 +15,7 @@ const NAV_LINKS = [
 ]
 
 const Navbar = () => {
+  const navigate = useNavigate()
   const [isOpen, setIsOpen] = useState(false)
   const scrolled = useScrolled(20)
 
@@ -38,7 +39,7 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <Button className="text-base xl:text-lg px-8 xl:px-12 py-2.5">
+          <Button onClick={() => navigate('/konten')} className="text-base xl:text-lg px-8 xl:px-12 py-2.5">
             Mulai
           </Button>
         </div>
