@@ -14,8 +14,8 @@ const About = () => {
       <div className="flex flex-col lg:flex-row w-full mt-16 md:mt-24 lg:mt-36 gap-10 lg:gap-0">
         <div className="flex-1 animate-on-scroll" data-animation="animate-fade-left">
           <h2 className="font-pjs font-bold text-3xl md:text-4xl lg:text-5xl">Apa Itu Sibigo?</h2>
-          <p className="font-pjs text-base md:text-xl lg:text-2xl mt-6 md:mt-10 lg:mt-14 leading-relaxed">SIBI (Sistem Isyarat Bahasa Indonesia) adalah sistem bahasa isyarat resmi yang digunakan di Indonesia untuk mendukung komunikasi bagi komunitas Tuli.</p>
-          <p className="font-pjs text-base md:text-xl lg:text-2xl mt-4 md:mt-6 lg:mt-10 leading-relaxed">Melalui SIBIGO, kami ingin memperkenalkan SIBI kepada masyarakat luas agar tercipta komunikasi yang lebih inklusif di Indonesia</p>
+          <p className="font-pjs text-base md:text-xl lg:text-2xl mt-6 md:mt-10 lg:mt-14 leading-relaxed">SIBIGO hadir untuk memperkenalkan SIBI (Sistem Isyarat Bahasa Indonesia) ke masyarakat luas. Kami ingin mempermudah komunikasi antara masyarakat dan komunitas Tuli secara inklusif.</p>
+          <p className="font-pjs text-base md:text-xl lg:text-2xl mt-4 md:mt-6 lg:mt-10 leading-relaxed">Selain itu, SIBIGO mendukung edukasi dan pengembangan teknologi untuk mempermudah pembelajaran bahasa isyarat. Dengan ini, kami berharap bisa memperkuat inklusivitas di Indonesia dan mendorong terciptanya masyarakat yang lebih terbuka, ramah, dan saling memahami</p>
         </div>
         <div className="hidden lg:flex flex-1 justify-center animate-on-scroll" data-animation="animate-fade-right">
           <div className="w-[400px] h-[400px] xl:w-[666px] xl:h-[666px] rounded-full bg-[#fcc61d]/25"></div>
@@ -244,7 +244,7 @@ const About = () => {
         <div className="relative flex justify-between w-full animate-on-scroll" data-animation="animate-fade-left">
           <div className="max-w-full lg:max-w-[900px]">
             <h2 className='text-[#3338A0] font-pjs font-bold text-2xl md:text-4xl lg:text-5xl'>Gratis. Seru. Interaktif. Inklusif.</h2>
-            <p className='text-black font-pjs text-base md:text-xl lg:text-2xl mt-4 md:mt-6 leading-relaxed'>SIBIGO bikin belajar Sistem Isyarat Bahasa Indonesia jadi lebih mudah dan menyenangkan untuk semua.</p>
+            <p className='text-black font-pjs text-base md:text-xl lg:text-2xl mt-4 md:mt-6 leading-relaxed'>SIBIGO menghadirkan cara belajar Sistem Isyarat Bahasa Indonesia yang lebih mudah dan menyenangkan bagi semua.</p>
           </div>
           <div className="-mt-24 mr-24">
             <img src={gif1} alt="" />
@@ -253,8 +253,8 @@ const About = () => {
 
         <div className="relative flex justify-between flex-row-reverse w-full mb-24 animate-on-scroll" data-animation="animate-fade-right">
           <div className="max-w-full lg:max-w-[900px]">
-            <h2 className='text-[#3338A0] font-pjs font-bold text-2xl md:text-4xl lg:text-5xl'>Belajar. Main. Naik Level.</h2>
-            <p className='text-black font-pjs text-base md:text-xl lg:text-2xl mt-4 md:mt-6 leading-relaxed'>Setiap materi disusun bertahap agar mudah dipahami. Pengguna bisa belajar huruf, kata, hingga percakapan </p>
+            <h2 className='text-[#3338A0] font-pjs font-bold text-2xl md:text-4xl lg:text-5xl'>Isyarat Mudah Untuk Semua</h2>
+            <p className='text-black font-pjs text-base md:text-xl lg:text-2xl mt-4 md:mt-6 leading-relaxed'>SIBIGO dirancang untuk pemula yang ingin mengenal bahasa isyarat dengan cara yang sederhana, jelas, dan tidak membingungkan.</p>
           </div>
           <div className="-mt-24 ml-24">
             <img src={gif2} alt="" />
@@ -263,8 +263,8 @@ const About = () => {
 
         <div className="relative flex justify-between w-full mb-24 animate-on-scroll" data-animation="animate-fade-left">
           <div className="max-w-full lg:max-w-[900px]">
-            <h2 className='text-[#3338A0] font-pjs font-bold text-2xl md:text-4xl lg:text-5xl'>Isyarat Mudah Untuk Semua.</h2>
-            <p className='text-black font-pjs text-base md:text-xl lg:text-2xl mt-4 md:mt-6 leading-relaxed'>SIBIGO dirancang untuk pemula yang ingin mengenal bahasa isyarat dengan cara yang sederhana, jelas, dan tidak membingungkan.</p>
+            <h2 className='text-[#3338A0] font-pjs font-bold text-2xl md:text-4xl lg:text-5xl'>Pembelajaran Interaktif</h2>
+            <p className='text-black font-pjs text-base md:text-xl lg:text-2xl mt-4 md:mt-6 leading-relaxed'>SIBIGO menghadirkan pembelajaran melalui game, LKS, dan kuis, serta didukung AI untuk menjawab pertanyaanmu.</p>
           </div>
           <div className="-mt-48 mr-24">
             <img src={gif3} alt="" />
@@ -274,7 +274,7 @@ const About = () => {
         <div className="relative flex justify-between flex-row-reverse w-full animate-on-scroll" data-animation="animate-fade-right">
           <div className="max-w-full lg:max-w-[900px]">
             <h2 className='text-[#3338A0] font-pjs font-bold text-2xl md:text-4xl lg:text-5xl'>Go Learn. Go SIBIGO.</h2>
-            <p className='text-black font-pjs text-base md:text-xl lg:text-2xl mt-4 md:mt-6 leading-relaxed'>Belajar sedikit demi sedikit dan bangun kemampuan komunikasi yang lebih inklusif dengan pengalaman yang terasa seperti bermain game.</p>
+            <p className='text-black font-pjs text-base md:text-xl lg:text-2xl mt-4 md:mt-6 leading-relaxed'>Belajar sedikit demi sedikit dan bangun kemampuan komunikasi yang lebih inklusif dengan pengalaman yang lebih menyenangkan.</p>
           </div>
           <div className="-mt-24 ml-24">
             <img src={gif4} alt="" />

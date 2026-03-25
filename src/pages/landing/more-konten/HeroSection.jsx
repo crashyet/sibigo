@@ -1,5 +1,27 @@
 import React from 'react'
 import Button from '@/components/ui/Button'
+import sibi from '@/assets/sibi-white.png'
+
+const data = [
+  {
+    title: 'LKS SIBI',
+    description: 'Latihan interaktif untuk menguji pemahaman SIBI secara bertahap dan terstruktur.',
+    button: 'Mulai',
+    link: '/lesson'
+  },
+  {
+    title: 'SIBIGO Ai Pintar',
+    description: 'Dapatkan jawaban cepat dan akurat seputar SIBI melalui fitur tanya jawab otomatis.',
+    button: 'Mulai',
+    link: '/chat'
+  },
+  {
+    title: 'Game Edukatif',
+    description: 'Game dan tantangan seru untuk belajar SIBI dengan cara yang menyenangkan.',
+    button: 'Mulai',
+    link: '/play'
+  }
+]
 
 const HeroSection = () => {
   return (
@@ -29,7 +51,7 @@ const HeroSection = () => {
         </svg>
 
         {/* Foreground Content */}
-        <div className="relative z-10 w-full flex-1 flex flex-col md:flex-row p-6 md:p-10 lg:p-16 pb-12 lg:pb-16 items-center lg:items-center">
+        <div className="relative z-10 w-full flex-1 flex flex-col md:flex-row p-6 md:p-10 lg:p-16 lg:px-32 pb-12 lg:pb-16 items-center justify-between lg:items-center">
           
           {/* Badge Over Yellow Blob */}
           <div className="absolute top-[4%] left-[6%] md:top-[6%] md:left-[8%] z-20">
@@ -45,60 +67,31 @@ const HeroSection = () => {
           </div>
 
           {/* Left Column (SIBI Info) */}
-          <div className="w-full md:w-[50%] h-full flex flex-col justify-center pr-4 md:pr-10 lg:pr-16 mt-12 md:mt-4 lg:mt-0">
-            <h1 
-              className="text-5xl md:text-6xl lg:text-[70px] xl:text-[80px] text-white mb-4 lg:mb-6 tracking-wide drop-shadow-md"
-              style={{ fontFamily: "'Patrick Hand', 'Comic Sans MS', cursive" }}
-            >
-              SIBI
-            </h1>
-            <p className="text-white/95 text-[11px] sm:text-xs md:text-sm lg:text-base xl:text-lg leading-relaxed lg:leading-[1.7] text-justify md:text-left font-medium drop-shadow-sm">
-              Sistem Isyarat Bahasa Indonesia adalah sistem bahasa isyarat yang digunakan dalam dunia pendidikan di Indonesia dan disusun mengikuti struktur Bahasa Indonesia, sehingga tata bahasanya lebih formal dan terarah. Berbeda dengan Bahasa Isyarat Indonesia yang berkembang secara alami di komunitas Tuli dan digunakan dalam komunikasi sehari-hari dengan struktur bahasa yang lebih natural.
+          <div className="w-full md:w-[60%] h-full flex flex-col justify-center pr-4 md:pr-10 lg:pr-16 mt-12 md:mt-4 lg:mt-0">
+            <img src={sibi} alt="" className='w-24 md:w-32 h-auto mb-8' />
+            <p className="text-white/95 text-sm md:text-base lg:text-lg xl:text-xl leading-relaxed lg:leading-[1.7] text-justify md:text-left font-medium drop-shadow-sm mb-8">
+              Sistem Isyarat Bahasa Indonesia (SIBI) adalah bahasa isyarat resmi yang digunakan dalam dunia pendidikan di Indonesia. SIBI disusun mengikuti struktur Bahasa Indonesia, sehingga memiliki tata bahasa yang sistematis, formal, dan mudah dipelajari.
+            </p>
+            <p className="text-white/95 text-sm md:text-base lg:text-lg xl:text-xl leading-relaxed lg:leading-[1.7] text-justify md:text-left font-medium drop-shadow-sm">
+              Karena kemudahan itulah membuat SIBI sebagai langkah awal yang tepat bagi siapa saja yang ingin memahami dan mempelajari komunikasi isyarat secara lebih mudah.
             </p>
           </div>
 
           {/* Right Column (Cards) */}
-          <div className="w-full md:w-[50%] flex flex-col justify-center gap-3 lg:gap-4 xl:gap-5 mt-8 md:mt-4 lg:mt-0 z-10 pl-0 md:pl-2 lg:pl-6">
-            
-            {/* LKS SIBI Card */}
-            <div className="bg-white rounded-xl lg:rounded-2xl p-4 lg:p-5 xl:p-6 flex flex-col shadow-lg hover:-translate-y-1 transition-transform">
-              <h3 className="text-[#3338A0] font-bold text-base lg:text-lg xl:text-xl mb-1 lg:mb-2">
-                LKS SIBI
-              </h3>
-              <p className="text-gray-600 text-[10px] sm:text-[11px] lg:text-xs xl:text-sm leading-snug mb-3 lg:mb-4">
-                Latihan interaktif untuk menguji pemahaman SIBI secara bertahap dan terstruktur.
-              </p>
-              <Button variant="primary" className="w-full py-1.5 lg:py-2 text-[13px] lg:text-sm xl:text-base rounded-xl">
-                Mulai
-              </Button>
-            </div>
-
-            {/* SIBIGO Ai Pintar Card */}
-            <div className="bg-white rounded-xl lg:rounded-2xl p-4 lg:p-5 xl:p-6 flex flex-col shadow-lg hover:-translate-y-1 transition-transform">
-              <h3 className="text-[#3338A0] font-bold text-base lg:text-lg xl:text-xl mb-1 lg:mb-2">
-                SIBIGO Ai Pintar
-              </h3>
-              <p className="text-gray-600 text-[10px] sm:text-[11px] lg:text-xs xl:text-sm leading-snug mb-3 lg:mb-4">
-                Dapatkan jawaban cepat dan akurat seputar SIBI melalui fitur tanya jawab otomatis.
-              </p>
-              <Button variant="primary" className="w-full py-1.5 lg:py-2 text-[13px] lg:text-sm xl:text-base rounded-xl">
-                Mulai
-              </Button>
-            </div>
-
-            {/* Game Edukatif Card */}
-            <div className="bg-white rounded-xl lg:rounded-2xl p-4 lg:p-5 xl:p-6 flex flex-col shadow-lg hover:-translate-y-1 transition-transform">
-              <h3 className="text-[#3338A0] font-bold text-base lg:text-lg xl:text-xl mb-1 lg:mb-2">
-                Game Edukatif
-              </h3>
-              <p className="text-gray-600 text-[10px] sm:text-[11px] lg:text-xs xl:text-sm leading-snug mb-3 lg:mb-4">
-                Game dan tantangan seru untuk belajar SIBI dengan cara yang menyenangkan.
-              </p>
-              <Button variant="primary" className="w-full py-1.5 lg:py-2 text-[13px] lg:text-sm xl:text-base rounded-xl">
-                Mulai
-              </Button>
-            </div>
-
+          <div className="w-full md:w-[35%] flex flex-col justify-center gap-3 lg:gap-4 xl:gap-5 mt-8 md:mt-4 lg:mt-0 z-10 pl-0 md:pl-2 lg:pl-6">
+            {data.map((item, index) => (
+              <div className="bg-white rounded-xl lg:rounded-2xl p-4 lg:p-5 xl:p-6 flex flex-col shadow-lg hover:-translate-y-1 transition-transform">
+                <h3 className="text-[#3338A0] font-bold text-base lg:text-lg xl:text-xl mb-1 lg:mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 text-[10px] sm:text-[11px] lg:text-xs xl:text-sm leading-snug mb-3 lg:mb-4">
+                  {item.description}
+                </p>
+                <Button variant="primary" className="w-full py-1.5 lg:py-2 text-[13px] lg:text-sm xl:text-base rounded-xl" onClick={() => window.location.href = item.link}>
+                  {item.button}
+                </Button>
+              </div>
+            ))}
           </div>
         </div>
       </div>

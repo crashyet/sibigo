@@ -17,9 +17,9 @@ import maskot4 from '@/assets/maskot/maskot4.png'
 const PROFILE_IMAGES = [pf1, pf2, pf3, pf4, pf5]
 
 const STATS = [
-  { value: '9,6 JT+', label: 'Tuli & Gangguan Pendengaran di Indonesia' },
-  { value: '5.280+', label: 'Data isyarat SIBI dalam penelitian' },
-  { value: 'RENDAH', label: 'Pemahaman masyarakat terhadap bahasa isyarat' },
+  { value: '22 JT+', label: 'Tuli & Gangguan Pendengaran di Indonesia' },
+  { value: '21.351+', label: 'Data video isyarat SIBI dalam penelitian' },
+  { value: '9%', label: 'Penyandang disabilitas di Indonesia menggunakan SIBI' },
 ]
 
 const Home = () => {

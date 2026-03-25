@@ -31,7 +31,7 @@ const Konten = () => {
 
         <div className="flex flex-col items-center justify-center mt-12 md:mt-18 lg:mt-24 animate-on-scroll" data-animation="animate-fade-up">
           <h2 className='font-pjs font-bold text-black text-2xl md:text-4xl lg:text-5xl text-center'>Belajar SIBI Jadi Lebih Seru</h2>
-          <p className='font-pjs text-base md:text-xl lg:text-2xl mt-6 md:mt-10 lg:mt-18 text-center px-0 md:px-12 lg:px-24 leading-relaxed'>Platform belajar Sistem Isyarat Bahasa Indonesia dengan sistem level, kuis interaktif, dan materi bertahap yang dirancang untuk pemula hingga mahir.</p>
+          <p className='font-pjs text-base md:text-xl lg:text-2xl mt-6 md:mt-10 lg:mt-18 text-center px-0 md:px-12 lg:px-24 leading-relaxed'>Platform belajar Sistem Isyarat Bahasa Indonesia dengan game, kuis, LKS, dan AI untuk membantu menjawab pertanyaan secara cepat.</p>
         </div>
 
         {/* Tags */}
