@@ -14,8 +14,8 @@ const FAQ_DATA = [
     answer: 'Di SIBIGO, pengguna dapat mempelajari berbagai materi dasar seperti alfabet, angka, serta kosakata dan isyarat yang sering digunakan dalam komunikasi sehari-hari.'
   },
   {
-    question: 'Apakah belajar bahasa isyarat penting bagi masyarakat umum?',
-    answer: 'Penting karena dengan mempelajari bahasa isyarat, masyarakat dapat lebih memahami dan berkomunikasi dengan komunitas Tuli, sehingga membantu menciptakan lingkungan yang lebih inklusif dan saling menghargai.'
+    question: 'Bagaimana cara mulai belajar di SIBIGO?',
+    answer: 'Kamu bisa langsung mulai dengan memilih materi yang tersedia di LKS, lalu mencoba latihan melalui game, dan kuis yang ada atau bertanya langsung ke ai Pintar SIBIGO.'
   }
 ]
 
@@ -49,7 +49,7 @@ const FaqSection = () => {
                 onClick={() => toggleFaq(index)}
                 className="w-full flex items-center justify-between p-5 md:p-6 lg:p-7 text-left cursor-pointer hover:bg-[#EAEFF6] transition-colors focus:outline-none"
               >
-                <span className="font-bold text-[#1E2B63] text-sm md:text-base lg:text-lg pr-4 lg:pr-8 tracking-wide">
+                <span className="font-bold text-[#1E2B63] text-base lg:text-lg pr-4 lg:pr-8 tracking-wide">
                   {item.question}
                 </span>
                 <div className="shrink-0 text-[#1E2B63]">
@@ -70,7 +70,7 @@ const FaqSection = () => {
               <div 
                 className={`transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[500px] opacity-100 pb-5 md:pb-6 lg:pb-7' : 'max-h-0 opacity-0'}`}
               >
-                <div className="px-5 md:px-6 lg:px-7 text-xs md:text-sm lg:text-base text-[#1E2B63]/90 leading-relaxed font-medium">
+                <div className="px-5 md:px-6 lg:px-7 text-sm lg:text-base text-[#1E2B63]/90 leading-relaxed font-medium">
                   {item.answer}
                 </div>
               </div>

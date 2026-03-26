@@ -47,7 +47,7 @@ const Contact = () => {
       {/* Top Banner */}
       <SectionTitle title="Contact Us" className="mb-10 md:mb-20 max-w-7xl mx-auto" />
 
-      <div className="flex flex-col lg:flex-row gap-8 md:gap-12 max-w-7xl mx-auto animate-on-scroll" data-animation="animate-fade-up">
+      <div className="flex flex-col xl:flex-row gap-8 md:gap-12 max-w-7xl mx-auto animate-on-scroll" data-animation="animate-fade-up">
         {/* Left Column: Form */}
         <div className="flex-1">
           <div className="flex items-center gap-4 mb-10">
@@ -96,7 +96,7 @@ const Contact = () => {
         </div>
 
         {/* Right Column: Information Box */}
-        <div className="lg:w-[450px] bg-[#2E338A] rounded-[40px] p-10 text-white flex flex-col justify-between">
+        <div className="xl:w-[450px] bg-[#2E338A] rounded-[40px] p-10 text-white flex flex-col justify-between">
           <div className="space-y-8">
             <h4 className="text-2xl font-bold leading-tight mb-4">
               Hallo! Kita Selalu Disini Untuk Membantu Anda

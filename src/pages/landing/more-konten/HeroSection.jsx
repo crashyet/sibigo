@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import Button from '@/components/ui/Button'
 import sibi from '@/assets/sibi-white.png'
 
@@ -24,11 +25,13 @@ const data = [
 ]
 
 const HeroSection = () => {
+  const navigate = useNavigate()
+
   return (
     <section id='hero' className='relative w-full min-h-dvh pt-32 pb-20 font-pjs flex items-stretch justify-center'>
       <div className="relative w-full max-w-[1500px] mx-auto mt-4 md:mt-10 flex flex-col">
-        {/* Background SVG */}
-        <svg className="absolute inset-0 w-full h-full drop-shadow-2xl z-0" preserveAspectRatio="none" viewBox="0 0 1688 993" fill="none" xmlns="http://www.w3.org/2000/svg">
+        {/* Background SVG — hidden on mobile, visible on md+ */}
+        <svg className="absolute inset-0 w-full h-full drop-shadow-2xl z-0 hidden lg:block" preserveAspectRatio="none" viewBox="0 0 1688 993" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M6.51003 133.845C2.96242 76.9825 47.5674 28.6508 104.531 27.6339L1550.71 1.81704C1606.63 0.818807 1652.5 45.8743 1652.5 101.801V885.619C1652.5 943.647 1603.27 989.491 1545.39 985.366L140.25 885.219C90.291 881.658 50.672 841.687 47.5533 791.698L6.51003 133.845Z" fill="url(#paint0_linear_416_3)" />
           <mask id="mask0_416_3" style={{ maskType: 'alpha' }} maskUnits="userSpaceOnUse" x="6" y="1" width="1678" height="977">
             <path d="M6.51003 133.845C2.96242 76.9825 47.5674 28.6508 104.531 27.6339L1554.27 1.7536C1608.8 0.780137 1654.05 43.6802 1655.99 98.1848L1683.57 874.035C1685.68 933.173 1636.25 981.192 1577.19 977.38L140.881 884.672C90.6451 881.43 50.651 841.35 47.5164 791.107L6.51003 133.845Z" fill="url(#paint1_linear_416_3)" />
@@ -50,15 +53,26 @@ const HeroSection = () => {
           </defs>
         </svg>
 
+        {/* Mobile Background — a simple rounded gradient container, hidden on md+ */}
+        <div className="lg:hidden absolute inset-0 rounded-[30px] overflow-hidden z-0"
+          style={{ background: 'linear-gradient(to bottom, #3338A0 18%, #272A79 60%, #12143A 100%)' }}
+        >
+          {/* Decorative yellow blob */}
+          <div className="absolute top-0 left-0 w-[60%] h-[80px] rounded-br-[60px]" style={{ background: '#FCC61D' }}></div>
+          {/* Decorative curved strokes */}
+          <div className="absolute top-[10%] right-0 w-[80px] h-[300px] rounded-full border-[3px] border-[#3338A0]/40 -mr-10"></div>
+          <div className="absolute bottom-[10%] left-0 w-[60px] h-[250px] rounded-full border-[3px] border-[#3338A0]/30 -ml-8"></div>
+        </div>
+
         {/* Foreground Content */}
-        <div className="relative z-10 w-full flex-1 flex flex-col md:flex-row p-6 md:p-10 lg:p-16 lg:px-32 pb-12 lg:pb-16 items-center justify-between lg:items-center">
+        <div className="relative z-10 w-full flex-1 flex flex-col md:flex-row p-6 md:p-10 lg:p-16 xl:px-32 pb-12 lg:pb-16 items-center justify-between lg:items-center">
           
           {/* Badge Over Yellow Blob */}
           <div className="absolute top-[4%] left-[6%] md:top-[6%] md:left-[8%] z-20">
             <h2 
-              className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-[#FCC61D] tracking-wider" 
+              className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-pjs font-extrabold text-white tracking-wider" 
               style={{ 
-                WebkitTextStroke: '1px white', 
+                WebkitTextStroke: '2px #C59560', 
                 textShadow: '2px 3px 6px rgba(0,0,0,0.2)' 
               }}
             >
@@ -67,27 +81,27 @@ const HeroSection = () => {
           </div>
 
           {/* Left Column (SIBI Info) */}
-          <div className="w-full md:w-[60%] h-full flex flex-col justify-center pr-4 md:pr-10 lg:pr-16 mt-12 md:mt-4 lg:mt-0">
-            <img src={sibi} alt="" className='w-24 md:w-32 h-auto mb-8' />
-            <p className="text-white/95 text-sm md:text-base lg:text-lg xl:text-xl leading-relaxed lg:leading-[1.7] text-justify md:text-left font-medium drop-shadow-sm mb-8">
+          <div className="w-full md:w-[60%] h-full flex flex-col justify-center pr-0 md:pr-10 lg:pr-16 mt-12 md:mt-4 lg:mt-0">
+            <img src={sibi} alt="" className='w-20 md:w-32 h-auto mb-6 md:mb-8 mt-12' />
+            <p className="text-white/95 text-sm md:text-base lg:text-lg xl:text-xl leading-relaxed lg:leading-[1.7] text-left font-medium drop-shadow-sm mb-6 md:mb-8">
               Sistem Isyarat Bahasa Indonesia (SIBI) adalah bahasa isyarat resmi yang digunakan dalam dunia pendidikan di Indonesia. SIBI disusun mengikuti struktur Bahasa Indonesia, sehingga memiliki tata bahasa yang sistematis, formal, dan mudah dipelajari.
             </p>
-            <p className="text-white/95 text-sm md:text-base lg:text-lg xl:text-xl leading-relaxed lg:leading-[1.7] text-justify md:text-left font-medium drop-shadow-sm">
+            <p className="text-white/95 text-sm md:text-base lg:text-lg xl:text-xl leading-relaxed lg:leading-[1.7] text-left font-medium drop-shadow-sm ">
               Karena kemudahan itulah membuat SIBI sebagai langkah awal yang tepat bagi siapa saja yang ingin memahami dan mempelajari komunikasi isyarat secara lebih mudah.
             </p>
           </div>
 
           {/* Right Column (Cards) */}
-          <div className="w-full md:w-[35%] flex flex-col justify-center gap-3 lg:gap-4 xl:gap-5 mt-8 md:mt-4 lg:mt-0 z-10 pl-0 md:pl-2 lg:pl-6">
+          <div className="w-full md:w-[35%] flex flex-col justify-center gap-3 lg:gap-4 xl:gap-5 mt-6 md:mt-4 lg:mt-0 z-10 pl-0 md:pl-2 lg:pl-6">
             {data.map((item, index) => (
-              <div className="bg-white rounded-xl lg:rounded-2xl p-4 lg:p-5 xl:p-6 flex flex-col shadow-lg hover:-translate-y-1 transition-transform">
-                <h3 className="text-[#3338A0] font-bold text-base lg:text-lg xl:text-xl mb-1 lg:mb-2">
+              <div key={index} className="bg-white rounded-xl lg:rounded-2xl p-4 lg:p-5 xl:p-6 flex flex-col shadow-lg hover:-translate-y-1 transition-transform">
+                <h3 className="text-[#3338A0] font-bold text-sm sm:text-base lg:text-lg xl:text-xl mb-1 lg:mb-2">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 text-[10px] sm:text-[11px] lg:text-xs xl:text-sm leading-snug mb-3 lg:mb-4">
+                <p className="text-gray-600 text-[11px] lg:text-xs xl:text-sm leading-snug mb-3 lg:mb-4">
                   {item.description}
                 </p>
-                <Button variant="primary" className="w-full py-1.5 lg:py-2 text-[13px] lg:text-sm xl:text-base rounded-xl" onClick={() => window.location.href = item.link}>
+                <Button variant="primary" className="w-full py-1.5 lg:py-2 text-[13px] lg:text-sm xl:text-base rounded-xl" onClick={() => navigate(item.link)}>
                   {item.button}
                 </Button>
               </div>
