@@ -39,15 +39,15 @@ const FEATURES = [
 
 const About = () => {
   return (
-    <section id='about' className='relative px-6 md:px-20 lg:px-40 mt-20 md:mt-32 lg:mt-44'>
-      <div className="flex items-center justify-center border-2 border-[#3338A0] rounded-full py-3 md:py-4 animate-on-scroll" data-animation="animate-fade-up">
-        <h2 className="font-pjs font-bold text-3xl md:text-4xl lg:text-5xl">About Us</h2>
+    <section id='about' className='relative px-6 md:px-20 lg:px-40 mt-16 md:mt-24 lg:mt-32'>
+      <div className="flex items-center justify-center border-2 border-[#3338A0] rounded-full py-2.5 md:py-3.5 animate-on-scroll" data-animation="animate-fade-up">
+        <h2 className="font-pjs font-bold text-2xl md:text-3xl lg:text-4xl">About Us</h2>
       </div>
-      <div className="flex flex-col lg:flex-row w-full mt-16 md:mt-24 lg:mt-36 gap-10 lg:gap-16">
+      <div className="flex flex-col lg:flex-row w-full mt-12 md:mt-18 lg:mt-24 gap-10 lg:gap-16">
         <div className="flex-1 animate-on-scroll" data-animation="animate-fade-left">
-          <h2 className="font-pjs font-bold text-3xl md:text-4xl lg:text-5xl">Apa Itu Sibigo?</h2>
-          <p className="font-pjs text-base md:text-xl lg:text-xl xl:text-2xl mt-6 md:mt-10 lg:mt-14 leading-relaxed">SIBIGO hadir untuk memperkenalkan SIBI (Sistem Isyarat Bahasa Indonesia) ke masyarakat luas. Kami ingin mempermudah komunikasi antara masyarakat dan komunitas Tuli secara inklusif.</p>
-          <p className="font-pjs text-base md:text-xl lg:text-xl xl:text-2xl mt-4 md:mt-6 lg:mt-10 leading-relaxed">Selain itu, SIBIGO mendukung edukasi dan pengembangan teknologi untuk mempermudah pembelajaran bahasa isyarat. Dengan ini, kami berharap bisa memperkuat inklusivitas di Indonesia dan mendorong terciptanya masyarakat yang lebih terbuka, ramah, dan saling memahami</p>
+          <h2 className="font-pjs font-bold text-2xl md:text-3xl lg:text-4xl">Apa Itu Sibigo?</h2>
+          <p className="font-pjs text-base md:text-lg lg:text-lg xl:text-xl mt-4 md:mt-8 lg:mt-10 leading-relaxed">SIBIGO hadir untuk memperkenalkan SIBI (Sistem Isyarat Bahasa Indonesia) ke masyarakat luas. Kami ingin mempermudah komunikasi antara masyarakat dan komunitas Tuli secara inklusif.</p>
+          <p className="font-pjs text-base md:text-lg lg:text-lg xl:text-xl mt-3 md:mt-5 lg:mt-8 leading-relaxed">Selain itu, SIBIGO mendukung edukasi dan pengembangan teknologi untuk mempermudah pembelajaran bahasa isyarat. Dengan ini, kami berharap bisa memperkuat inklusivitas di Indonesia dan mendorong terciptanya masyarakat yang lebih terbuka, ramah, dan saling memahami</p>
         </div>
         {/* Illustration — replaced SVGs with about.png */}
         <div className="flex flex-1 justify-center animate-on-scroll" data-animation="animate-fade-right">
@@ -62,7 +62,7 @@ const About = () => {
       <div className="border-2 md:border-3 border-[#d9d9d9] left-0 mt-10 md:mt-16 lg:mt-20 w-full"></div>
 
       {/* Feature Items */}
-      <div className="relative flex flex-col gap-12 md:gap-16 lg:gap-24 mt-12 md:mt-20 lg:mt-30">
+      <div className="relative flex flex-col gap-10 md:gap-14 lg:gap-20 mt-10 md:mt-16 lg:mt-24">
         {FEATURES.map((feature, index) => (
           <div
             key={index}
@@ -71,8 +71,8 @@ const About = () => {
           >
             {/* Text Content */}
             <div className="flex-1 w-full">
-              <h2 className='text-[#3338A0] font-pjs font-bold text-2xl md:text-4xl lg:text-5xl'>{feature.title}</h2>
-              <p className='text-black font-pjs text-base md:text-xl lg:text-2xl mt-4 md:mt-6 leading-relaxed'>{feature.text}</p>
+              <h2 className='text-[#3338A0] font-pjs font-bold text-2xl md:text-3xl lg:text-4xl'>{feature.title}</h2>
+              <p className='text-black font-pjs text-base md:text-lg lg:text-xl mt-3 md:mt-5 leading-relaxed'>{feature.text}</p>
             </div>
             {/* Gif — hidden on small mobile, shown on sm+ */}
             <div className="hidden sm:flex shrink-0 justify-center w-full sm:w-auto">

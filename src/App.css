@@ -193,6 +193,20 @@
 }
 
 .text-stroke-yellow {
-  -webkit-text-stroke: 6px #FCC61D; /* Untuk browser berbasis Webkit (Chrome, Edge, Safari) */
-  text-stroke: 6px #FCC61D;         /* Standar (belum semua support penuh) */
+  -webkit-text-stroke: 2px #FCC61D;
+  text-stroke: 2px #FCC61D;
+}
+
+@media (min-width: 768px) {
+  .text-stroke-yellow {
+    -webkit-text-stroke: 4px #FCC61D;
+    text-stroke: 4px #FCC61D;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-stroke-yellow {
+    -webkit-text-stroke: 6px #FCC61D;
+    text-stroke: 6px #FCC61D;
+  }
 }

@@ -25,16 +25,16 @@ const STATS = [
 const Home = () => {
   const navigate = useNavigate()
   return (
-    <section id='home' className="relative px-6 md:px-20 lg:px-32 xl:px-40 min-h-screen overflow-hidden">
+    <section id='home' className="relative px-6 md:px-20 lg:px-32 xl:px-40 min-h-screen lg:min-h-0 lg:h-fit overflow-hidden lg:pb-20 pt-12">
       {/* Hero Area */}
-      <div className="relative flex flex-col lg:flex-row lg:h-fit items-center pt-24 md:pt-28 lg:pt-48 lg:mt-20">
+      <div className="relative flex flex-col lg:flex-row lg:h-fit items-center pt-24 md:pt-28 lg:pt-36 lg:mt-10">
         {/* Left: Text & CTA */}
         <div className="flex flex-col flex-1 gap-8 md:gap-12 lg:gap-16 lg:-mt-48 z-10 animate-on-scroll" data-animation="animate-fade-left">
-          <h2 className="font-pjs font-bold text-3xl sm:text-4xl md:text-[2.75rem] lg:text-5xl xl:text-6xl text-black leading-tight">
+          <h2 className="font-pjs font-bold text-3xl sm:text-4xl md:text-[2.75rem] lg:text-4xl xl:text-5xl text-black leading-tight">
             Cara Seru dan Efektif<br />Belajar Bahasa<br />Isyarat
           </h2>
-          <div className="flex flex-col sm:flex-row gap-6 md:gap-10 lg:gap-20 items-start sm:items-center">
-            <Button onClick={() => navigate('/konten')} className="w-full sm:w-56 md:w-72 lg:w-88 text-lg md:text-xl py-4">
+          <div className="flex flex-col sm:flex-row gap-6 md:gap-10 lg:gap-16 items-start sm:items-center">
+            <Button onClick={() => navigate('/konten')} className="w-full sm:w-56 md:w-64 lg:w-72 text-lg md:text-xl py-3.5">
               Mulai
             </Button>
             <div className="flex">
@@ -42,12 +42,12 @@ const Home = () => {
                 <img
                   key={i}
                   src={pf}
-                  className={`h-10 sm:h-12 md:h-16 xl:h-20 border-3 md:border-4 lg:border-5 border-white rounded-full ${i > 0 ? '-ml-4 sm:-ml-6 md:-ml-8 lg:-ml-10' : ''}`}
+                  className={`h-10 sm:h-12 md:h-14 lg:h-16 xl:h-18 border-2 md:border-3 lg:border-4 border-white rounded-full ${i > 0 ? '-ml-4 sm:-ml-5 md:-ml-7 lg:-ml-8' : ''}`}
                   alt=""
                 />
               ))}
-              <div className="flex items-center justify-center text-white w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 xl:w-20 xl:h-20 rounded-full bg-linear-to-b from-[#DFBA45] to-[#FCC61D] -ml-4 sm:-ml-6 md:-ml-8 lg:-ml-10 border-3 md:border-4 lg:border-5 border-white">
-                <h3 className="font-pjs font-bold text-sm sm:text-base md:text-xl xl:text-2xl text-white">90+</h3>
+              <div className="flex items-center justify-center text-white w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18 rounded-full bg-linear-to-b from-[#DFBA45] to-[#FCC61D] -ml-4 sm:-ml-5 md:-ml-7 lg:-ml-8 border-2 md:border-3 lg:border-4 border-white">
+                <h3 className="font-pjs font-bold text-sm sm:text-base md:text-lg xl:text-xl text-white">90+</h3>
               </div>
             </div>
           </div>
@@ -57,22 +57,22 @@ const Home = () => {
         <div className="relative flex-1 hidden lg:block animate-on-scroll" data-animation="animate-fade-right">
           <div className="relative">
             <div className="absolute w-fit h-fit rounded-full bg-[#C59560]/28 -mt-25 ml-10 xl:ml-40 animate-float">
-              <img src={maskot1} alt="" className="w-16 xl:w-auto" />
+              <img src={maskot1} alt="" className="w-14 lg:w-16 xl:w-20" />
             </div>
-            <div className="absolute w-fit h-fit rounded-full bg-[#C59560]/28 ml-60 xl:ml-150 animate-float" style={{ animationDelay: '1s' }}>
-              <img src={maskot2} alt="" className="w-16 xl:w-auto" />
+            <div className="absolute w-fit h-fit rounded-full bg-[#C59560]/28 ml-60 xl:ml-120 animate-float" style={{ animationDelay: '1s' }}>
+              <img src={maskot2} alt="" className="w-14 lg:w-16 xl:w-20" />
             </div>
           </div>
           <div>
-            <svg className="w-full max-w-[420px] xl:max-w-[800px] h-auto" viewBox="0 0 897 659" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className="w-full max-w-[420px] lg:max-w-[500px] xl:max-w-[600px] h-auto" viewBox="0 0 897 659" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="276.899" y="69.9903" width="451" height="68.9301" rx="20" transform="rotate(13.1226 276.899 69.9903)" fill="#3338A0" />
               <rect x="205.899" y="408.784" width="115.896" height="40.3028" rx="20" transform="rotate(13.1226 205.899 408.784)" fill="#C59560" />
               <rect x="562.899" y="438.784" width="115.896" height="33.9246" rx="16.9623" transform="rotate(13.1226 562.899 438.784)" fill="#C59560" />
               <path d="M88.1968 142.664C106.488 87.6062 181.228 79.9723 210.272 130.195C219.843 146.746 236.005 158.443 254.718 162.361L770.152 270.298C829.886 282.807 865.451 344.5 846.343 402.461L822.934 473.467C801.671 537.962 711.969 542.003 684.995 479.68C675.415 457.548 655.634 441.485 632.006 436.653L140.039 336.045C82.2153 324.22 47.7103 264.534 66.3177 208.523L88.1968 142.664Z" fill="#FCC61D" />
             </svg>
           </div>
-          <div className="absolute z-10 w-fit h-fit -mt-90 xl:-mt-150 ml-10 xl:ml-40">
-            <img src={maskot3} alt="" className="animate-float w-[280px] xl:w-[500px]" style={{ animationDelay: '0.5s' }} />
+          <div className="absolute z-10 w-fit h-fit -mt-72 lg:-mt-90 xl:-mt-110 ml-10 xl:ml-32">
+            <img src={maskot3} alt="" className="animate-float w-[280px] lg:w-[350px] xl:w-[400px]" style={{ animationDelay: '0.5s' }} />
           </div>
         </div>
 
@@ -88,13 +88,13 @@ const Home = () => {
       </div>
 
       {/* Stats Banner */}
-      <div className="relative mt-6 md:mt-14">
+      <div className="relative mt-8 md:mt-12 lg:mt-2 xl:mt-0">
         {/* Mascot4 — only visible on xl+ to avoid overlapping stats */}
         <div className="hidden xl:block absolute -mt-10 ml-4 z-20">
-          <img src={maskot4} alt="" className='w-56' />
+          <img src={maskot4} alt="" className='w-48 xl:w-56' />
         </div>
 
-        <div className="flex flex-col md:flex-row justify-center text-white bg-linear-to-r from-[#3338A0] to-[#4A50CE] w-full gap-3 md:gap-4 lg:gap-6 xl:gap-10 py-6 md:py-10 lg:py-14 px-4 md:px-6 lg:px-12 xl:pl-72 xl:pr-20 rounded-[30px] md:rounded-[50px] animate-on-scroll" data-animation="animate-fade-up">
+        <div className="flex flex-col md:flex-row justify-center text-white bg-linear-to-r from-[#3338A0] to-[#4A50CE] w-full gap-3 md:gap-4 lg:gap-6 xl:gap-10 py-6 md:py-8 lg:py-10 px-4 md:px-6 lg:px-12 xl:pl-64 xl:pr-20 rounded-[30px] md:rounded-[50px] animate-on-scroll" data-animation="animate-fade-up">
           {STATS.map((stat, index) => (
             <StatCard key={index} value={stat.value} label={stat.label} />
           ))}

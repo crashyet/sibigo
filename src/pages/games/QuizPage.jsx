@@ -142,9 +142,9 @@ const QuizPage = () => {
         </div>
 
         {/* Badge */}
-        <div className="flex flex-col items-center pt-20 px-4 md:px-6 mb-6 relative z-10">
-          <div className="flex items-center gap-4 mb-5">
-            <div className="flex-1 h-[5px] w-16 md:w-24 lg:w-50 bg-linear-to-r from-transparent to-white rounded-full"></div>
+        <div className="flex flex-col items-center pt-10 md:pt-14 px-4 md:px-6 mb-4 relative z-10">
+          <div className="flex items-center gap-4 mb-4">
+            <div className="flex-1 h-[4px] w-12 md:w-20 lg:w-32 bg-linear-to-r from-transparent to-white rounded-full"></div>
             <div className="bg-[#FCC61D] text-white font-bold px-5 py-1.5 rounded-full text-base shadow-lg flex items-center gap-2">
               <span>
                 <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -159,8 +159,8 @@ const QuizPage = () => {
 
         {/* Title */}
         <div className="flex flex-col items-center relative gap-4 z-10">
-          <h1 className="text-3xl md:text-4xl font-bold text-[#F7F7F7] text-center px-4">Kuis Selesai</h1>
-          <p className="text-[#F7F7F7] text-base md:text-lg text-center px-8">Kuis sudah selesai! Mari lihat skor yang anda dapatkan</p>
+          <h1 className="text-2xl md:text-3xl font-bold text-[#F7F7F7] text-center px-4">Kuis Selesai</h1>
+          <p className="text-[#F7F7F7] text-sm md:text-base text-center px-8 opacity-90">Kuis sudah selesai! Mari lihat skor yang anda dapatkan</p>
         </div>
 
         {/* Result Card with Mascot */}
@@ -168,19 +168,19 @@ const QuizPage = () => {
           <div className="quiz-fade-in relative max-w-[1100px] w-full flex justify-center md:justify-end">
             
             {/* Mascot Side (Absolute positioning to overlap card) */}
-            <div className="absolute w-[300px] md:w-[400px] lg:w-[500px] xl:w-[600px] left-[-50px] md:left-[-80px] lg:left-[-100px] -bottom-2 z-20 hidden md:flex items-center md:-ml-8 lg:-ml-14 pb-2">
+            <div className="absolute w-[280px] md:w-[350px] lg:w-[420px] xl:w-[480px] left-[-30px] md:left-[-60px] lg:left-[-80px] -bottom-2 z-20 hidden md:flex items-center md:-ml-8 lg:-ml-14 pb-2">
               {/* Speech Bubble */}
-              <div className="absolute bg-[#C59560] text-white text-sm md:text-base lg:text-lg font-medium rounded-2xl px-4 md:px-6 py-3 md:py-4 -top-10 text-center shadow-lg md:ml-32 lg:ml-56">
+              <div className="absolute bg-[#C59560] text-white text-xs md:text-sm lg:text-base font-medium rounded-2xl px-4 md:px-5 py-2.5 md:py-3.5 -top-8 text-center shadow-lg md:ml-24 lg:ml-40">
                 <span className="text-yellow-300 mr-1">⭐</span> {getMessage()}
                 {/* Bubble tail (pointing down-left) */}
-                <div className="absolute -bottom-3 left-20 w-0 h-0 border-l-10 border-r-10 border-t-14 border-l-transparent border-r-transparent border-t-[#C59560] -skew-x-12"></div>
+                <div className="absolute -bottom-2.5 left-16 w-0 h-0 border-l-8 border-r-8 border-t-12 border-l-transparent border-r-transparent border-t-[#C59560] -skew-x-12"></div>
               </div>
               {/* Mascot Image */}
-              <img src={score >= 5 ? maskot9 : maskot10} alt="Maskot" className={`w-[250px] md:w-[350px] lg:w-[500px] h-auto object-contain ${score <= 5 ? 'ml-16' : ''}`}  />
+              <img src={score >= 5 ? maskot9 : maskot10} alt="Maskot" className={`w-[220px] md:w-[320px] lg:w-[450px] h-auto object-contain ${score <= 5 ? 'ml-12' : ''}`}  />
             </div>
 
             {/* Score Card */}
-            <div className="bg-white rounded-[24px] p-6 md:p-8 md:py-18 md:pr-12 md:pl-[250px] lg:pl-[350px] xl:pl-[500px] w-full flex flex-col items-start shadow-2xl relative z-10">
+            <div className="bg-white rounded-[24px] p-6 md:p-8 md:py-14 md:pr-10 md:pl-[220px] lg:pl-[300px] xl:pl-[420px] w-full flex flex-col items-start shadow-2xl relative z-10">
               <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-[#252525] mb-3">Anda Berhasil Menjawab</h2>
 
               {/* Stars + Score */}
@@ -201,13 +201,13 @@ const QuizPage = () => {
               <div className="flex flex-col sm:flex-row gap-4 w-full">
                 <button
                   onClick={() => navigate('/play')}
-                  className="bg-[#FCC61D] text-white font-bold px-12 py-3 rounded-2xl shadow-[0_5px_0_#D49D42] active:translate-y-1 active:shadow-none transition-all cursor-pointer text-xl w-full sm:w-auto sm:min-w-[160px] border border-[#FCC61D]"
+                  className="bg-[#FCC61D] text-white font-bold px-8 py-2.5 rounded-2xl shadow-[0_4px_0_#D49D42] active:translate-y-1 active:shadow-none transition-all cursor-pointer text-lg w-full sm:w-auto sm:min-w-[140px] border border-[#FCC61D]"
                 >
                   Kembali
                 </button>
                 <button
                   onClick={() => setShowReviewModal(true)}
-                  className="bg-[#F8F9FA] text-[#FCC61D] border border-[#E5E7EB] font-bold px-12 py-3 rounded-2xl shadow-[0_5px_0_#D49D42] active:translate-y-1 active:shadow-none transition-all cursor-pointer text-xl w-full sm:w-auto sm:min-w-[160px]"
+                  className="bg-[#F8F9FA] text-[#FCC61D] border border-[#E5E7EB] font-bold px-8 py-2.5 rounded-2xl shadow-[0_4px_0_#D49D42] active:translate-y-1 active:shadow-none transition-all cursor-pointer text-lg w-full sm:w-auto sm:min-w-[140px]"
                 >
                   Ulas Pembelajaran
                 </button>
@@ -226,8 +226,8 @@ const QuizPage = () => {
                  }
                }}
           >
-            <div className="bg-[#FCFBFA] rounded-[32px] w-full max-w-3xl shadow-2xl relative p-8 md:p-12 flex flex-col items-center animate-in fade-in zoom-in duration-300">
-              <img src={maskotBook} alt="Maskot" className="hidden md:block w-[120px] md:w-[200px] mb-4 absolute -bottom-16 -left-16" />
+            <div className="bg-[#FCFBFA] rounded-[32px] w-full max-w-3xl max-h-[95vh] shadow-2xl relative p-6 md:p-10 flex flex-col items-center animate-in fade-in zoom-in duration-300 ">
+              <img src={maskotBook} alt="Maskot" className="hidden lg:block w-[150px] mb-4 absolute -bottom-12 -left-12" />
               
               {/* Close Button overlapping top-right */}
               <button 
@@ -238,16 +238,17 @@ const QuizPage = () => {
                     setShowReviewModal(false);
                   }
                 }}
-                className="absolute -top-4 -right-4 md:-top-5 md:-right-5 bg-[#E2E4E9] hover:bg-[#D1D5DB] rounded-full shadow-lg transition-colors z-110 flex items-center justify-center w-12 h-12 md:w-[50px] md:h-[50px] cursor-pointer"
+                className="absolute top-4 right-4 bg-[#E2E4E9] hover:bg-[#D1D5DB] rounded-full shadow-lg transition-colors z-110 flex items-center justify-center w-10 h-10 md:w-11 md:h-11 cursor-pointer"
               >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3338A0" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3338A0" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M18 6L6 18M6 6l12 12" />
                 </svg>
               </button>
 
               {/* Header text */}
-              <h2 className="text-2xl md:text-3xl font-bold text-[#252525] mb-2 text-center">Review Ulang Quizmu</h2>
-              <p className="text-[#252525] text-base md:text-lg text-center mb-8 font-medium">Klik Kotak kotak dibawah ini untuk membuka solusinya</p>
+              <div className="w-full overflow-y-auto custom-scrollbar flex flex-col items-center pt-2">
+                <h2 className="text-xl md:text-2xl font-bold text-[#252525] mb-1 text-center">Review Ulang Quizmu</h2>
+                <p className="text-[#252525]/80 text-sm md:text-base text-center mb-6 font-medium">Klik Kotak kotak dibawah ini untuk membuka solusinya</p>
 
               {reviewQuestionIndex === null ? (
                 /* Grid View */
@@ -269,61 +270,62 @@ const QuizPage = () => {
                 </div>
               ) : (
                 /* Detail View */
-                <div className="w-full flex flex-col space-y-4 md:space-y-6 animate-in slide-in-from-bottom-5 fade-in duration-300 relative max-w-[650px] mx-auto z-10 md:px-[60px]">
-                  
-                  {/* Question blue card */}
-                  <div className="bg-[#3338A0] rounded-[24px] p-6 md:p-8 flex flex-col items-center justify-center w-full min-h-[160px] shadow-sm">
-                    <img src={quizData[reviewQuestionIndex].image} alt="Soal" className="h-[100px] md:h-[130px] object-contain mb-5 drop-shadow-md" />
-                    <p className="text-white text-center font-medium md:text-lg">{quizData[reviewQuestionIndex].question}</p>
-                  </div>
-                  
-                  <div className="flex flex-col gap-4">
-                    {/* Your Answer */}
-                    <div className="w-full text-left">
-                      <p className="text-[#252525] text-sm md:text-base font-semibold mb-2">Jawaban kamu :</p>
-                      {userAnswers[reviewQuestionIndex] === quizData[reviewQuestionIndex].answer ? (
-                        <div className="bg-[#DFFEEA] w-full rounded-full flex items-center shadow-md overflow-hidden relative cursor-default">
-                          <div className="w-8 h-full absolute left-0 top-0 bg-[#22C35D]"></div>
-                          <div className="flex-1 flex items-center justify-between py-3 md:py-4 pl-14 pr-6">
-                            <span className="font-bold text-base md:text-lg text-[#000000]">{userAnswers[reviewQuestionIndex]}</span>
-                            <div className="w-7 h-7 rounded-full border-3 border-[#22C35D] flex items-center justify-center relative">
-                              <div className="w-4 h-4 rounded-full bg-[#22C35D]"></div>
+                    <div className="w-full flex flex-col space-y-4 animate-in slide-in-from-bottom-5 fade-in duration-300 relative max-w-[650px] mx-auto z-10 md:px-[60px] pb-4">
+                      
+                      {/* Question blue card */}
+                      <div className="bg-[#3338A0] rounded-[24px] p-5 md:p-6 flex flex-col items-center justify-center w-full min-h-[120px] shadow-sm">
+                        <img src={quizData[reviewQuestionIndex].image} alt="Soal" className="h-[80px] md:h-[100px] object-contain mb-4 drop-shadow-md" />
+                        <p className="text-white text-center font-medium text-sm md:text-base">{quizData[reviewQuestionIndex].question}</p>
+                      </div>
+                      
+                      <div className="flex flex-col gap-3">
+                        {/* Your Answer */}
+                        <div className="w-full text-left">
+                          <p className="text-[#252525] text-xs md:text-sm font-semibold mb-1.5 ml-1">Jawaban kamu :</p>
+                          {userAnswers[reviewQuestionIndex] === quizData[reviewQuestionIndex].answer ? (
+                            <div className="bg-[#DFFEEA] w-full rounded-full flex items-center shadow-md overflow-hidden relative cursor-default">
+                              <div className="w-6 h-full absolute left-0 top-0 bg-[#22C35D]"></div>
+                              <div className="flex-1 flex items-center justify-between py-2.5 md:py-3.5 pl-10 pr-6">
+                                <span className="font-bold text-sm md:text-base text-[#000000]">{userAnswers[reviewQuestionIndex]}</span>
+                                <div className="w-6 h-6 rounded-full border-2 border-[#22C35D] flex items-center justify-center relative">
+                                  <div className="w-3 h-3 rounded-full bg-[#22C35D]"></div>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                        </div>
-                      ) : (
-                        <div className="bg-[#FEEBEB] w-full rounded-full flex items-center shadow-md overflow-hidden relative cursor-default">
-                          <div className="w-8 h-full absolute left-0 top-0 bg-[#EB3939]"></div>
-                          <div className="flex-1 flex items-center justify-between py-3 md:py-4 pl-14 pr-6">
-                            <span className="font-bold text-base md:text-lg text-[#000000]">{userAnswers[reviewQuestionIndex] || 'Tidak menjawab'}</span>
-                            <div className="w-7 h-7 rounded-full border-3 border-[#EB3939] flex items-center justify-center relative">
-                              <div className="w-4 h-4 rounded-full bg-[#EB3939]"></div>
+                          ) : (
+                            <div className="bg-[#FEEBEB] w-full rounded-full flex items-center shadow-md overflow-hidden relative cursor-default">
+                              <div className="w-6 h-full absolute left-0 top-0 bg-[#EB3939]"></div>
+                              <div className="flex-1 flex items-center justify-between py-2.5 md:py-3.5 pl-10 pr-6">
+                                <span className="font-bold text-sm md:text-base text-[#000000]">{userAnswers[reviewQuestionIndex] || 'Tidak menjawab'}</span>
+                                <div className="w-6 h-6 rounded-full border-2 border-[#EB3939] flex items-center justify-center relative">
+                                  <div className="w-3 h-3 rounded-full bg-[#EB3939]"></div>
+                                </div>
+                              </div>
                             </div>
-                          </div>
+                          )}
                         </div>
-                      )}
-                    </div>
 
-                    {/* Correct Answer */}
-                    <div className="w-full text-left">
-                      <p className="text-[#252525] text-sm md:text-base font-semibold mb-2">Jawaban benar:</p>
-                      <div className="bg-[#DFFEEA] w-full rounded-full flex items-center shadow-md overflow-hidden relative cursor-default">
-                        <div className="w-8 h-full absolute left-0 top-0 bg-[#22C35D]"></div>
-                        <div className="flex-1 flex items-center justify-between py-3 md:py-4 pl-14 pr-6">
-                          <span className="font-bold text-base md:text-lg text-[#000000]">{quizData[reviewQuestionIndex].answer}</span>
-                          <div className="w-7 h-7 rounded-full border-3 border-[#22C35D] flex items-center justify-center relative">
-                            <div className="w-4 h-4 rounded-full bg-[#22C35D]"></div>
+                        {/* Correct Answer */}
+                        <div className="w-full text-left">
+                          <p className="text-[#252525] text-xs md:text-sm font-semibold mb-1.5 ml-1">Jawaban benar:</p>
+                          <div className="bg-[#DFFEEA] w-full rounded-full flex items-center shadow-md overflow-hidden relative cursor-default">
+                            <div className="w-6 h-full absolute left-0 top-0 bg-[#22C35D]"></div>
+                            <div className="flex-1 flex items-center justify-between py-2.5 md:py-3.5 pl-10 pr-6">
+                              <span className="font-bold text-sm md:text-base text-[#000000]">{quizData[reviewQuestionIndex].answer}</span>
+                              <div className="w-6 h-6 rounded-full border-2 border-[#22C35D] flex items-center justify-center relative">
+                                <div className="w-3 h-3 rounded-full bg-[#22C35D]"></div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
 
+                    </div>
+                  )}
                 </div>
-              )}
+              </div>
             </div>
-          </div>
-        )}
+          )}
       </section>
     )
   }

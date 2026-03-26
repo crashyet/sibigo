@@ -26,12 +26,12 @@ const Konten = () => {
 
   return (
     <section id='konten' className=''>
-      <div className="relative px-6 md:px-20 lg:px-32 xl:px-40 mt-20 md:mt-30 lg:mt-40">
-        <SectionTitle title="Konten" />
+      <div className="relative px-6 md:px-20 lg:px-32 xl:px-40 mt-16 md:mt-24 lg:mt-32">
+        <SectionTitle title="Konten" className="mb-8 md:mb-12" />
 
-        <div className="flex flex-col items-center justify-center mt-12 md:mt-18 lg:mt-24 animate-on-scroll" data-animation="animate-fade-up">
-          <h2 className='font-pjs font-bold text-black text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-center'>Belajar SIBI Jadi Lebih Seru</h2>
-          <p className='font-pjs text-sm md:text-base lg:text-xl xl:text-2xl mt-6 md:mt-10 lg:mt-18 text-center px-0 md:px-12 lg:px-24 leading-relaxed'>Platform belajar Sistem Isyarat Bahasa Indonesia dengan game, kuis, LKS, dan AI untuk membantu menjawab pertanyaan secara cepat.</p>
+        <div className="flex flex-col items-center justify-center mt-8 md:mt-12 lg:mt-16 animate-on-scroll" data-animation="animate-fade-up">
+          <h2 className='font-pjs font-bold text-black text-2xl md:text-3xl lg:text-4xl text-center'>Belajar SIBI Jadi Lebih Seru</h2>
+          <p className='font-pjs text-sm md:text-base lg:text-lg xl:text-xl mt-4 md:mt-8 lg:mt-12 text-center px-0 md:px-12 lg:px-24 leading-relaxed'>Platform belajar Sistem Isyarat Bahasa Indonesia dengan game, kuis, LKS, dan AI untuk membantu menjawab pertanyaan secara cepat.</p>
         </div>
 
         {/* Tags */}
@@ -56,7 +56,7 @@ const Konten = () => {
           <div onClick={() => navigate('/lesson')} className="relative flex flex-col justify-center w-full lg:flex-1 h-fit pt-5 pb-10 md:pb-14 px-6 md:px-9 border border-[#3338A0] rounded-3xl shadow-[0_0_10px_0px] shadow-[#3338A0]/50 animate-on-scroll cursor-pointer hover:shadow-[#3338A0] transition-all duration-300" data-animation="animate-scale-in">
             {/* <img src={maskot5} alt="" className='absolute top-0 left-0 w-16 md:w-auto' /> */}
             <h2 className='font-pjs font-semibold text-sm md:text-base text-end mr-4 md:mr-6 mb-2.5'>@ LKS Sibi</h2>
-            <div className="h-48 md:h-[300px] lg:h-[300px] xl:h-[386px] w-full">
+            <div className="h-48 md:h-[260px] lg:h-[260px] xl:h-[320px] w-full">
               <img src={kontenLKS} alt="" className='w-full h-full object-cover rounded-3xl' />
             </div>
             <div className="mb-6 md:mb-10 mt-4 md:mt-5">
@@ -132,7 +132,7 @@ const Konten = () => {
           <div onClick={() => navigate('/play')} className="relative flex flex-col justify-center w-full lg:flex-1 h-fit pt-5 pb-10 md:pb-14 px-6 md:px-9 border border-[#3338A0] rounded-3xl shadow-[0_0_10px_0px] shadow-[#3338A0]/50 animate-on-scroll cursor-pointer hover:shadow-[#3338A0] transition-all duration-300" data-animation="animate-scale-in">
             {/* <img src={maskot7} alt="" className='absolute top-0 right-0 w-16 md:w-auto' /> */}
             <h2 className='font-pjs font-semibold text-sm md:text-base mr-4 md:mr-6 mb-2.5'>@ Game Edukatif</h2>
-            <div className="bg-[#d9d9d9] h-48 md:h-[300px] lg:h-[300px] xl:h-[386px] w-full rounded-3xl">
+            <div className="bg-[#d9d9d9] h-48 md:h-[260px] lg:h-[260px] xl:h-[320px] w-full rounded-3xl">
               <img src={kontenEdukatif} alt="" className='w-full h-full object-cover rounded-2xl' />
             </div>
             <div className="mb-6 md:mb-10 mt-4 md:mt-5">
@@ -158,8 +158,8 @@ const Konten = () => {
           <img src={maskot8} alt="" className="w-40 md:w-56 lg:w-auto" />
         </div>
         <div className="text-white font-pjs text-center md:text-left">
-          <h2 className="font-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight mb-4 md:mb-6">Ayo!! Belajar bareng <br className="hidden md:block" />dengan Sibigo</h2>
-          <p className="text-sm md:text-base lg:text-xl xl:text-2xl mb-8 md:mb-12 lg:mb-16 opacity-90 leading-relaxed tracking-wider">Masuk ke dunia pembelajaran interaktif dengan <br className="hidden md:block" />latihan dan tantangan seru.</p>
+          <h2 className="font-bold text-2xl md:text-3xl lg:text-4xl leading-tight mb-4 md:mb-6">Ayo!! Belajar bareng <br className="hidden md:block" />dengan Sibigo</h2>
+          <p className="text-sm md:text-base lg:text-lg xl:text-xl mb-8 md:mb-12 lg:mb-16 opacity-90 leading-relaxed tracking-wider">Masuk ke dunia pembelajaran interaktif dengan <br className="hidden md:block" />latihan dan tantangan seru.</p>
           <Button
             variant="white"
             onClick={() => navigate('/konten')}

@@ -8,7 +8,7 @@ const NotFound = () => {
   const navigate = useNavigate()
 
   return (
-    <section className='bg-white min-h-screen relative font-pjs overflow-hidden flex flex-col items-center justify-center px-6'>
+    <section className='bg-white min-h-screen relative font-pjs overflow-hidden flex flex-col items-center justify-center px-6 py024'>
       {/* Linear Bottom */}
       <div className="absolute bottom-0 w-full h-1/4 bg-linear-to-b from-[#D9D9D9]/0 to-[#C5C7FF]"></div>
 
@@ -25,19 +25,19 @@ const NotFound = () => {
       </div>
 
       {/* Maskot */}
-      <div className="flex justify-center w-full relative z-10">
-        <img src={maskot} alt="" className="w-64 sm:w-72 md:w-80 lg:w-auto max-w-md" />
+      <div className="flex justify-center w-full relative z-10 -mt-10 lg:-mt-16 xl:-mt-20">
+        <img src={maskot} alt="" className="w-56 sm:w-64 md:w-72 lg:w-[300px] 2xl:w-[380px] max-w-md h-auto" />
       </div>
 
       {/* Header - ERROR text */}
-      <div className="relative z-10 -mt-8 md:-mt-12">
-        <h1 className='text-[#F7F7F7] text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold text-stroke-yellow text-center'>ERROR 404</h1>
+      <div className="relative z-10 -mt-6 md:-mt-10 lg:-mt-14 xl:-mt-18">
+        <h1 className='text-[#F7F7F7] text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl font-extrabold text-stroke-yellow text-center'>ERROR 404</h1>
       </div>
 
       {/* Text */}
-      <div className="flex flex-col items-center justify-center gap-2 mt-4 md:mt-6 mb-8 md:mb-10 relative z-10">
-        <h1 className='text-black text-lg md:text-2xl font-semibold text-center'>404 — Halamannya Nyasar!</h1>
-        <p className='text-black text-sm md:text-xl text-center'>Sepertinya halaman yang kamu cari lagi jalan-jalan. <br className="hidden md:block" />Yuk balik ke beranda dulu!</p>
+      <div className="flex flex-col items-center justify-center gap-1 mt-4 md:mt-6 mb-8 md:mb-10 relative z-10">
+        <h1 className='text-black text-lg md:text-xl lg:text-2xl font-semibold text-center'>404 — Halamannya Nyasar!</h1>
+        <p className='text-black text-sm md:text-lg lg:text-xl text-center px-4'>Sepertinya halaman yang kamu cari lagi jalan-jalan. <br className="hidden md:block" />Yuk balik ke beranda dulu!</p>
       </div>
 
       {/* Button */}

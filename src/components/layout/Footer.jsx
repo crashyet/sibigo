@@ -45,7 +45,7 @@ const FooterLinkSection = ({ title, links }) => (
 
 const Footer = () => {
   return (
-    <footer className="bg-[#3338A0] text-white pt-12 md:pt-20 pb-8 md:pb-10 px-6 md:px-20 font-pjs lg:px-32 animate-on-scroll" data-animation="animate-fade-up">
+    <footer className="bg-[#3338A0] text-white pt-12 md:pt-16 pb-8 md:pb-10 px-6 md:px-20 font-pjs lg:px-32 animate-on-scroll" data-animation="animate-fade-up">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-18">
           {/* Logo and Tagline */}
@@ -66,14 +66,16 @@ const Footer = () => {
             <p className="text-gray-200 text-sm mb-6">
               Daftar email untuk tips belajar & fitur baru
             </p>
-            <div className="relative flex items-center">
-              <input
-                type="email"
-                placeholder="Masukkan Email Anda"
-                className="w-full bg-white/20 border-none rounded-lg py-3 px-4 pr-12 text-white placeholder-gray-300 focus:ring-2 focus:ring-yellow-400 outline-none transition-all"
-              />
-              <button className="absolute right-0 bg-[#FFD500] hover:bg-[#FFC400] text-blue-900 rounded-r-lg p-3 transition-colors h-full flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+            <div className="flex items-center w-full max-w-sm">
+              <div className="relative flex-1">
+                <input
+                  type="email"
+                  placeholder="Masukkan Email Anda"
+                  className="w-full bg-white/20 border-none rounded-l-lg py-3 px-4 text-white placeholder-gray-300 focus:ring-2 focus:ring-yellow-400 outline-none transition-all"
+                />
+              </div>
+              <button className="bg-[#FFD500] hover:bg-[#FFC400] text-blue-900 rounded-r-lg p-3 transition-colors h-[48px] px-5 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
                   <path d="M3.478 2.404a.75.75 0 0 0-.926.941l2.432 7.905H13.5a.75.75 0 0 1 0 1.5H4.984l-2.432 7.905a.75.75 0 0 0 .926.94 60.519 60.519 0 0 0 18.445-8.986.75.75 0 0 0 0-1.218A60.517 60.517 0 0 0 3.478 2.404Z" />
                 </svg>
               </button>

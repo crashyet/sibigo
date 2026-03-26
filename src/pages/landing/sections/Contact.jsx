@@ -45,7 +45,7 @@ const Contact = () => {
   return (
     <section id='contact' className='container mx-auto px-6 md:px-20 lg:px-32 py-12 md:py-20 font-pjs'>
       {/* Top Banner */}
-      <SectionTitle title="Contact Us" className="mb-10 md:mb-20 max-w-7xl mx-auto" />
+      <SectionTitle title="Contact Us" className="mb-10 md:mb-16 max-w-7xl mx-auto" />
 
       <div className="flex flex-col xl:flex-row gap-8 md:gap-12 max-w-7xl mx-auto animate-on-scroll" data-animation="animate-fade-up">
         {/* Left Column: Form */}
@@ -96,8 +96,8 @@ const Contact = () => {
         </div>
 
         {/* Right Column: Information Box */}
-        <div className="xl:w-[450px] bg-[#2E338A] rounded-[40px] p-10 text-white flex flex-col justify-between">
-          <div className="space-y-8">
+        <div className="xl:w-[420px] bg-[#2E338A] rounded-[40px] p-8 md:p-10 text-white flex flex-col justify-between">
+          <div className="space-y-6 md:space-y-8">
             <h4 className="text-2xl font-bold leading-tight mb-4">
               Hallo! Kita Selalu Disini Untuk Membantu Anda
             </h4>
