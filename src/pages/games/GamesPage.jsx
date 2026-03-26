@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react'
+import React, { useState, useEffect, useMemo, useCallback, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import BackButton from '@/components/ui/BackButton'
 import BackAlert from '@/components/ui/BackAlert'
@@ -98,6 +98,22 @@ const GamesPage = () => {
     }
   }
 
+  // Ref to hold the latest handleCheck to avoid stale closures in setTimeout
+  const handleCheckRef = useRef(handleCheck);
+  useEffect(() => {
+    handleCheckRef.current = handleCheck;
+  });
+
+  // Auto-close feedback on mobile after 5 seconds
+  useEffect(() => {
+    if ((answerStatus === 'correct' || answerStatus === 'wrong') && window.innerWidth < 768) {
+      const timer = setTimeout(() => {
+        handleCheckRef.current();
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [answerStatus]);
+
   // Calculate Scores
   const totalCorrect = gameResultsArr.filter(r => r.isCorrect).length;
   const totalScore = gameResultsArr.reduce((acc, curr) => {
@@ -196,7 +212,8 @@ const GamesPage = () => {
 
         {/* Aside / Status Panel (Absolute Right) */}
         {(!isFinished) && (
-          <aside className='absolute right-2 md:right-8 lg:right-12 flex flex-col items-center justify-center gap-5 w-full max-w-[180px] md:max-w-[224px] pointer-events-auto z-50'>
+          <>
+          <aside className='hidden md:flex absolute right-2 md:right-8 lg:right-12 flex-col items-center justify-center gap-5 w-full max-w-[180px] md:max-w-[224px] pointer-events-auto z-50'>
             <h2 className="text-white font-bold text-2xl md:text-3xl whitespace-nowrap drop-shadow-md">
               {currentQuestionIndex + 1} dari {totalQuestions} Game
             </h2>
@@ -210,6 +227,20 @@ const GamesPage = () => {
               </Button>
             </div>
           </aside>
+          {/* Mobile bottom bar */}
+          <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#2A2D8A] border-t border-white/10 px-4 py-4 flex items-center justify-between gap-4">
+            <h2 className="text-white font-bold text-lg whitespace-nowrap drop-shadow-md">
+              {currentQuestionIndex + 1} dari {totalQuestions}
+            </h2>
+            <Button
+              variant={buttonVariant}
+              onClick={handleCheck}
+              className="px-8 py-3 text-base font-bold transition-colors"
+            >
+              {buttonTitle}
+            </Button>
+          </div>
+          </>
         )}
       </main>
       )}

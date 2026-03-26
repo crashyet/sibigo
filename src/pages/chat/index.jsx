@@ -123,8 +123,8 @@ const ChatBot = () => {
   return (
     <div className="min-h-screen font-pjs" style={{ background: '#E3E4FE' }}>
       {/* Top bar with back button and line */}
-      <div className="flex items-center px-8 md:px-16 lg:px-32 pt-10 pb-5 sticky top-0 z-50 chat-glass">
-        <Link to="/konten" className="absolute flex items-center gap-2 text-[#2D2D2D] font-semibold text-lg hover:opacity-70 transition-opacity">
+      <div className="flex items-center px-4 sm:px-8 md:px-16 lg:px-32 pt-6 md:pt-10 pb-5 sticky top-0 z-50 chat-glass">
+        <Link to="/konten" className="flex items-center gap-2 text-[#2D2D2D] font-semibold text-base md:text-lg hover:opacity-70 transition-opacity shrink-0">
           <svg width="10" height="18" viewBox="0 0 16 27" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fillRule="evenodd" clipRule="evenodd" d="M0.610548 11.7854L12.396 -6.48499e-05L15.3418 2.94577L5.0293 13.2583L15.3418 23.5708L12.396 26.5166L0.610548 14.7312C0.219983 14.3405 0.000576019 13.8107 0.000576019 13.2583C0.000576019 12.7058 0.219983 12.176 0.610548 11.7854Z" fill="#424242" />
           </svg>
@@ -132,17 +132,17 @@ const ChatBot = () => {
         </Link>
 
         {/* Decorative line with badge */}
-        <div className="flex-1 flex items-center justify-center relative gap-7 mx-8">
-          <div className="h-2 w-80 bg-gradient-to-r from-[#E3E4FE] to-[#3338A0] rounded-full"></div>
-          <div className="bg-[#3338A0] text-white font-bold text-xl px-8 py-2 rounded-full whitespace-nowrap shadow-md">
+        <div className="flex-1 flex items-center justify-center relative gap-4 md:gap-7 ml-4 md:mx-8">
+          <div className="hidden md:block h-2 w-40 lg:w-80 bg-gradient-to-r from-[#E3E4FE] to-[#3338A0] rounded-full"></div>
+          <div className="bg-[#3338A0] text-white font-bold text-sm md:text-xl px-4 md:px-8 py-1.5 md:py-2 rounded-full whitespace-nowrap shadow-md">
             SIBIGO AI Pintar
           </div>
-          <div className="h-2 w-80 bg-gradient-to-l from-[#E3E4FE] to-[#3338A0] rounded-full"></div>
+          <div className="hidden md:block h-2 w-40 lg:w-80 bg-gradient-to-l from-[#E3E4FE] to-[#3338A0] rounded-full"></div>
         </div>
       </div>
 
       {/* Main content area */}
-      <div className="flex flex-col items-center px-8 md:px-16 lg:px-32 pt-8 pb-32">
+      <div className="flex flex-col items-center px-4 sm:px-8 md:px-16 lg:px-32 pt-6 md:pt-8 pb-28 md:pb-32">
         {/* Title */}
         <h1 className="text-[#2D2D2D] text-3xl md:text-4xl font-extrabold text-center mb-2">
           Mau belajar apa hari ini?
@@ -248,7 +248,7 @@ const ChatBot = () => {
       </div>
 
       {/* Fixed Input Bar */}
-      <div className="fixed bottom-0 left-0 right-0 px-8 md:px-16 lg:px-32 py-6" style={{ background: 'linear-gradient(transparent, #DDDCF5 30%)' }}>
+      <div className="fixed bottom-0 left-0 right-0 px-4 sm:px-8 md:px-16 lg:px-32 py-4 md:py-6" style={{ background: 'linear-gradient(transparent, #DDDCF5 30%)' }}>
         <div className="max-w-3xl mx-auto flex items-center gap-4">
           <div className="flex-1 flex items-center bg-white rounded-full shadow-lg border border-gray-200 overflow-hidden px-6 py-3">
             <input

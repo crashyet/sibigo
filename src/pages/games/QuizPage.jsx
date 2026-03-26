@@ -158,56 +158,56 @@ const QuizPage = () => {
         </div>
 
         {/* Title */}
-        <div className="flex flex-col items-center -mb-20 relative gap-4 z-10">
-          <h1 className="text-4xl font-bold text-[#F7F7F7]">Kuis Selesai</h1>
-          <p className="text-[#F7F7F7] text-lg">Kuis sudah selesai! Mari lihat skor yang anda dapatkan</p>
+        <div className="flex flex-col items-center relative gap-4 z-10">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#F7F7F7] text-center px-4">Kuis Selesai</h1>
+          <p className="text-[#F7F7F7] text-base md:text-lg text-center px-8">Kuis sudah selesai! Mari lihat skor yang anda dapatkan</p>
         </div>
 
         {/* Result Card with Mascot */}
         <div className="flex-1 flex items-center justify-center px-4 md:px-6 relative z-10 w-full mb-16 mt-8">
-          <div className="quiz-fade-in relative max-w-[1100px] w-full flex justify-end">
+          <div className="quiz-fade-in relative max-w-[1100px] w-full flex justify-center md:justify-end">
             
             {/* Mascot Side (Absolute positioning to overlap card) */}
-            <div className="absolute w-[600px] left-[-100px] -bottom-2 z-20 hidden md:flex items-center md:-ml-8 lg:-ml-14 pb-2">
+            <div className="absolute w-[300px] md:w-[400px] lg:w-[500px] xl:w-[600px] left-[-50px] md:left-[-80px] lg:left-[-100px] -bottom-2 z-20 hidden md:flex items-center md:-ml-8 lg:-ml-14 pb-2">
               {/* Speech Bubble */}
-              <div className="absolute bg-[#C59560] text-white text-lg font-medium rounded-2xl px-6 py-4 -top-10 text-center shadow-lg md:ml-56">
+              <div className="absolute bg-[#C59560] text-white text-sm md:text-base lg:text-lg font-medium rounded-2xl px-4 md:px-6 py-3 md:py-4 -top-10 text-center shadow-lg md:ml-32 lg:ml-56">
                 <span className="text-yellow-300 mr-1">⭐</span> {getMessage()}
                 {/* Bubble tail (pointing down-left) */}
-                <div className="absolute -bottom-3 left-20 w-0 h-0 border-l-[10px] border-r-[10px] border-t-[14px] border-l-transparent border-r-transparent border-t-[#C59560] -skew-x-12"></div>
+                <div className="absolute -bottom-3 left-20 w-0 h-0 border-l-10 border-r-10 border-t-14 border-l-transparent border-r-transparent border-t-[#C59560] -skew-x-12"></div>
               </div>
               {/* Mascot Image */}
-              <img src={score >= 5 ? maskot9 : maskot10} alt="Maskot" className={`w-[500px] h-auto object-contain ${score <= 5 ? 'ml-16' : ''}`}  />
+              <img src={score >= 5 ? maskot9 : maskot10} alt="Maskot" className={`w-[250px] md:w-[350px] lg:w-[500px] h-auto object-contain ${score <= 5 ? 'ml-16' : ''}`}  />
             </div>
 
             {/* Score Card */}
-            <div className="bg-white rounded-[24px] p-8 md:py-18 md:pr-12 md:pl-[500px] w-full flex flex-col items-start shadow-2xl relative z-10">
-              <h2 className="text-3xl font-semibold text-[#252525] mb-3">Anda Berhasil Menjawab</h2>
+            <div className="bg-white rounded-[24px] p-6 md:p-8 md:py-18 md:pr-12 md:pl-[250px] lg:pl-[350px] xl:pl-[500px] w-full flex flex-col items-start shadow-2xl relative z-10">
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-[#252525] mb-3">Anda Berhasil Menjawab</h2>
 
               {/* Stars + Score */}
               <div className="flex items-center flex-wrap gap-4 mb-3">
                 <div className="flex gap-[2px]">
                   {Array.from({ length: totalQuestions }, (_, i) => (
-                    <svg key={i} width="50" height="50" viewBox="0 0 24 24" fill={i < score ? '#FCC61D' : '#D1D5DB'} stroke="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg key={i} width="32" height="32" viewBox="0 0 24 24" fill={i < score ? '#FCC61D' : '#D1D5DB'} stroke="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                     </svg>
                   ))}
                 </div>
-                <span className="text-[#252525]/70 font-bold text-3xl">{score}/{totalQuestions}</span>
+                <span className="text-[#252525]/70 font-bold text-base md:text-2xl lg:text-3xl">{score}/{totalQuestions}</span>
               </div>
 
-              <p className="text-[#252525] font-semibold text-xl mb-14">Pertanyaan dengan benar</p>
+              <p className="text-[#252525] font-semibold text-base md:text-lg lg:text-xl mb-8 md:mb-14">Pertanyaan dengan benar</p>
 
               {/* Buttons with bottom shadow */}
-              <div className="flex gap-4 flex-wrap w-full md:w-auto">
+              <div className="flex flex-col sm:flex-row gap-4 w-full">
                 <button
                   onClick={() => navigate('/play')}
-                  className="bg-[#FCC61D] text-white font-bold px-12 py-3 rounded-2xl shadow-[0_5px_0_#D49D42] active:translate-y-1 active:shadow-none transition-all cursor-pointer text-xl min-w-[160px] md:flex-none border border-[#FCC61D]"
+                  className="bg-[#FCC61D] text-white font-bold px-12 py-3 rounded-2xl shadow-[0_5px_0_#D49D42] active:translate-y-1 active:shadow-none transition-all cursor-pointer text-xl w-full sm:w-auto sm:min-w-[160px] border border-[#FCC61D]"
                 >
                   Kembali
                 </button>
                 <button
                   onClick={() => setShowReviewModal(true)}
-                  className="bg-[#F8F9FA] text-[#FCC61D] border border-[#E5E7EB] font-bold px-12 py-3 rounded-2xl shadow-[0_5px_0_#D49D42] active:translate-y-1 active:shadow-none transition-all cursor-pointer text-xl min-w-[160px] md:flex-none"
+                  className="bg-[#F8F9FA] text-[#FCC61D] border border-[#E5E7EB] font-bold px-12 py-3 rounded-2xl shadow-[0_5px_0_#D49D42] active:translate-y-1 active:shadow-none transition-all cursor-pointer text-xl w-full sm:w-auto sm:min-w-[160px]"
                 >
                   Ulas Pembelajaran
                 </button>
@@ -227,7 +227,7 @@ const QuizPage = () => {
                }}
           >
             <div className="bg-[#FCFBFA] rounded-[32px] w-full max-w-3xl shadow-2xl relative p-8 md:p-12 flex flex-col items-center animate-in fade-in zoom-in duration-300">
-              <img src={maskotBook} alt="Maskot" className="w-[120px] md:w-[200px] mb-4 absolute -bottom-16 -left-16" />
+              <img src={maskotBook} alt="Maskot" className="hidden md:block w-[120px] md:w-[200px] mb-4 absolute -bottom-16 -left-16" />
               
               {/* Close Button overlapping top-right */}
               <button 
@@ -347,7 +347,7 @@ const QuizPage = () => {
         </div>
       </div>
       {/* Header */}
-      <div className="px-30 pt-10 pb-4 flex items-center relative z-20">
+      <div className="px-6 md:px-12 lg:px-30 pt-10 pb-4 flex items-center relative z-20">
         <BackButton onClick={() => setShowBackAlert(true)} variant="white" />
       </div>
 

@@ -17,23 +17,23 @@ const AlphabetDetailView = () => {
   else return <Navigate to="/lesson/alphabet" replace />
 
   return (
-    <section className='bg-white w-screen h-screen relative font-pjs flex flex-col'>
+    <section className='bg-white min-h-screen w-full relative font-pjs flex flex-col overflow-hidden'>
       {/* Linear Bottom */}
       <div className="absolute bottom-0 w-full h-1/4 bg-linear-to-b from-[#D9D9D9]/0 to-[#C5C7FF] pointer-events-none"></div>
 
       {/* Header Area */}
-      <div className="relative z-20">
-        <div className="px-30 pt-10">
+      <div className="relative z-20 w-full">
+        <div className="px-4 md:px-10 lg:px-20 pt-10">
           <BackButton variant='gray' to="/lesson/alphabet" />
         </div>
-        <div className="flex justify-center">
-          <img src={icon} alt="" className='w-18 -mt-8' />
+        <div className="flex justify-center -mt-8">
+          <img src={icon} alt="" className='w-14 md:w-18' />
         </div>
       </div>
 
       {/* Main Content */}
-      <div className='flex-1 flex items-center justify-center z-10 -mt-20'>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20 w-full px-60'>
+      <div className='flex-1 flex items-center justify-center z-10 py-12 md:py-0'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 lg:gap-12 w-full max-w-7xl px-4 md:px-12 lg:px-24 mx-auto'>
           {displayData.map((item) => (
             <ButtonLesson 
               key={item.id} 
