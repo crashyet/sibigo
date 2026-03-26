@@ -24,12 +24,12 @@ import vid_6 from '@/assets/book/number/videos/06.webm'
 import vid_7 from '@/assets/book/number/videos/07.webm'
 import vid_8 from '@/assets/book/number/videos/08.webm'
 import vid_9 from '@/assets/book/number/videos/09.webm'
-import puluhan from '@/assets/book/number/videos/puluhan.webm'
-import ratusan from '@/assets/book/number/videos/ratusan.webm'
-import ribuan from '@/assets/book/number/videos/ribuan.webm'
-import jutaan from '@/assets/book/number/videos/jutaan.webm'
-import miliaran from '@/assets/book/number/videos/miliyar.webm'
-import triliunan from '@/assets/book/number/videos/triliun.webm'
+import puluhan from '@/assets/book/number/videos/Puluhan.webm'
+import ratusan from '@/assets/book/number/videos/Ratusan.webm'
+import ribuan from '@/assets/book/number/videos/Ribuan.webm'
+import jutaan from '@/assets/book/number/videos/Jutaan.webm'
+import miliaran from '@/assets/book/number/videos/Miliyar.webm'
+import triliunan from '@/assets/book/number/videos/Triliun.webm'
 
 export const numberData = [
   { id: 1, title: 'Nol', image: nol, video: null, description: 'Angka 0 dilakukan dengan menggenggam tangan dan ibu jari berada di samping jari lainnya.' },
