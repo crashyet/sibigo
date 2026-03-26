@@ -7,9 +7,9 @@ const BookPage = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
   return (
-    <div className="flex min-h-screen relative">
+    <div className="flex h-screen overflow-hidden relative">
       <SidebarBook isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-      <main className="flex-1 min-h-screen overflow-auto font-pjs">
+      <main className="flex-1 h-full overflow-auto font-pjs">
         {/* Mobile menu toggle */}
         <button
           onClick={() => setSidebarOpen(true)}

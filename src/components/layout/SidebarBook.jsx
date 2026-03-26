@@ -7,6 +7,7 @@ import huruf from '@/assets/huruf.png'
 import isyarat from '@/assets/isyarat.png'
 import percakapan from '@/assets/percakapan.png'
 import angka from '@/assets/angka.png'
+import Button from '@/components/ui/Button'
 
 const MENU_ITEMS = [
   { id: 'alphabet', label: 'Huruf Alfabet', icon: huruf, path: '/lesson/alphabet' },
@@ -29,7 +30,7 @@ const SidebarBook = ({ isOpen, onClose }) => {
 
       <aside className={`
         fixed lg:relative z-50 lg:z-10
-        w-72 lg:w-88 min-h-screen bg-white border-r border-[#D1D1D1]
+        w-72 lg:w-80 h-screen bg-white border-r border-[#D1D1D1]
         flex shrink-0 flex-col py-8 lg:py-12 px-6 lg:px-8 font-pjs
         transition-transform duration-300 ease-in-out
         ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
@@ -46,13 +47,13 @@ const SidebarBook = ({ isOpen, onClose }) => {
         </button>
 
         {/* Logo Section */}
-        <div onClick={() => navigate('/')} className="flex items-center gap-3 mb-12 lg:mb-16 px-2 lg:px-4 cursor-pointer">
+        <div onClick={() => navigate('/')} className="flex items-center gap-3 mb-10 lg:mb-14 px-2 lg:px-4 cursor-pointer">
           <img src={logo} alt="Sibigo" className="w-12 lg:w-16" />
           <img src={sibigoText} alt="SIBIGO" className="h-5 lg:h-7" />
         </div>
 
         {/* Navigation List */}
-        <nav className="flex flex-col gap-3 lg:gap-4">
+        <nav className="flex flex-col gap-3 lg:gap-4 overflow-y-auto custom-scrollbar pr-1">
           {MENU_ITEMS.map((item) => (
             <NavLink
               key={item.id}
@@ -68,12 +69,21 @@ const SidebarBook = ({ isOpen, onClose }) => {
               {({ isActive }) => (
                 <>
                   <img src={item.icon} className={`shrink-0 w-8 lg:w-auto ${isActive ? '' : 'opacity-80'}`} />
-                  <span className="text-base lg:text-xl font-bold tracking-tight">{item.label}</span>
+                  <span className="text-base lg:text-lg font-bold tracking-tight">{item.label}</span>
                 </>
               )}
             </NavLink>
           ))}
         </nav>
+
+        {/* Back Button Section */}
+        <div className="mt-auto pt-6 border-t border-gray-100">
+          <Button
+            onClick={() => navigate('/')}
+            variant="primary"
+            className="w-full py-3 text-xl"
+          >Kembali</Button>
+        </div>
       </aside>
     </>
   )

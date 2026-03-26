@@ -9,7 +9,7 @@ const VocabularyCard = ({title, image, onClick}) => {
     >
       <div className="flex-1 flex justify-center items-center p-4 min-h-[220px]">
         {image ? (
-            <img src={image} alt={title} className="h-40 object-contain" />
+            <img src={image} alt={title} className="w-full object-cover" />
         ) : (
             <div className="w-full h-full" />
         )}

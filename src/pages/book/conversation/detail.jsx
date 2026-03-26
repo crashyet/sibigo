@@ -3,24 +3,23 @@ import { useParams, useNavigate } from 'react-router-dom'
 import VocabularyCard from '@/components/ui/VocabularyCard'
 import LessonPopup from '@/components/ui/LessonPopup'
 import maskotHead from '@/assets/logo.png'
+import { conversationData } from '@/data/book/'
+import NotFound from '@/pages/not-found/NotFound'
 
 const ConversationDetailView = () => {
   const { id } = useParams()
   const navigate = useNavigate()
-  const [currentPage, setCurrentPage] = useState(1)
   const [selectedLetter, setSelectedLetter] = useState(null)
 
-  // Dummy vocabulary data to simulate the word list
-  const dummyWords = [
-    { title: 'Asing', image: null },
-    { title: 'Asli', image: null },
-    { title: 'Aspal', image: null },
-    { title: 'Astaga', image: null },
-    { title: 'Asuh', image: null },
-    { title: 'Atap', image: null },
-  ]
+  let displayData = []
+    if (id === 'a') displayData = conversationData.slice(0, 6)
+    else if (id === 'b') displayData = conversationData.slice(6, 9)
 
-  const totalPages = 14
+  const isNotFound = (id !== 'a' && id !== 'b');
+
+  if (isNotFound) {
+    return <NotFound /> 
+  }
 
   return (
     <section className='bg-white min-h-screen relative font-pjs flex flex-col'>
@@ -55,7 +54,7 @@ const ConversationDetailView = () => {
         </div>
 
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-x-10 md:gap-y-10 w-full mb-16'>
-          {dummyWords.map((item, idx) => (
+          {displayData.map((item, idx) => (
             <VocabularyCard 
               key={idx} 
               title={item.title} 
@@ -63,35 +62,6 @@ const ConversationDetailView = () => {
               onClick={() => setSelectedLetter(item)}
             />
           ))}
-        </div>
-
-        {/* Pagination */}
-        <div className="flex items-center gap-3 text-gray-500 font-medium text-lg mt-auto pb-4">
-          <button 
-            className="w-10 h-10 flex items-center justify-center hover:text-[#3338A0] transition-colors disabled:opacity-50"
-            onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
-            disabled={currentPage === 1}
-          >
-            &lt;
-          </button>
-          
-          <button className={`w-10 h-10 flex items-center justify-center rounded-lg transition-colors ${currentPage === 1 ? 'bg-[#C2915A] text-white shadow-md' : 'hover:bg-gray-100 text-[#8C94A3]'}`} onClick={() => setCurrentPage(1)}>1</button>
-          <button className={`w-10 h-10 flex items-center justify-center rounded-lg transition-colors ${currentPage === 2 ? 'bg-[#C2915A] text-white shadow-md' : 'hover:bg-gray-100 text-[#8C94A3]'}`} onClick={() => setCurrentPage(2)}>2</button>
-          <button className={`w-10 h-10 flex items-center justify-center rounded-lg transition-colors ${currentPage === 3 ? 'bg-[#C2915A] text-white shadow-md' : 'hover:bg-gray-100 text-[#8C94A3]'}`} onClick={() => setCurrentPage(3)}>3</button>
-          <button className={`w-10 h-10 flex items-center justify-center rounded-lg transition-colors ${currentPage === 4 ? 'bg-[#C2915A] text-white shadow-md' : 'hover:bg-gray-100 text-[#8C94A3]'}`} onClick={() => setCurrentPage(4)}>4</button>
-          <button className={`w-10 h-10 flex items-center justify-center rounded-lg transition-colors ${currentPage === 5 ? 'bg-[#C2915A] text-white shadow-md' : 'hover:bg-gray-100 text-[#8C94A3]'}`} onClick={() => setCurrentPage(5)}>5</button>
-          
-          <span className="px-2 text-[#8C94A3]">...</span>
-          
-          <button className={`w-10 h-10 flex items-center justify-center rounded-lg transition-colors ${currentPage === totalPages ? 'bg-[#C2915A] text-white shadow-md' : 'hover:bg-gray-100 text-[#8C94A3]'}`} onClick={() => setCurrentPage(totalPages)}>{totalPages}</button>
-          
-          <button 
-            className="w-10 h-10 flex items-center justify-center hover:text-[#3338A0] transition-colors disabled:opacity-50"
-            onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
-            disabled={currentPage === totalPages}
-          >
-            &gt;
-          </button>
         </div>
 
         <LessonPopup 

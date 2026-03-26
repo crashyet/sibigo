@@ -46,7 +46,7 @@ const AlphabetView = () => {
   ]
 
   return (
-    <div className="relative overflow-hidden min-h-screen w-full">
+    <div className="relative overflow-hidden min-h-screen w-full px-4 md:px-24">
       {/* Decorative background blobs */}
       <div className="absolute -top-10 right-0 pointer-events-none">
         <svg width="318" height="283" viewBox="0 0 318 283" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[150px] md:w-[318px] opacity-20">
